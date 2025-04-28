@@ -3,7 +3,7 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
-    define('ROOT_DIR', '/scouts/');
+    define('ROOT_DIR', '/Cub-Scouts/');
 ?>
 
 <!DOCTYPE html>

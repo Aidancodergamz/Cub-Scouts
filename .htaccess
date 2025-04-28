@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /scouts/
+RewriteBase /Cub-Scouts/
 
 # If the file or directory exists, skip rewriting
 RewriteCond %{REQUEST_FILENAME} !-f
