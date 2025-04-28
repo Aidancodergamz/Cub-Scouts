@@ -1,0 +1,102 @@
+/* Body and overall styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #0099cc;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: #003c73;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #005ea2;
+}
+
+/* Introduction Section */
+.intro {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.intro .btn {
+    padding: 10px 20px;
+    background-color: #005ea2;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.intro .btn:hover {
+    background-color: #003c73;
+}
+
+/* Activities Section */
+.activities {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.activities h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.activities p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.activities .btn {
+    padding: 10px 20px;
+    background-color: #005ea2;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.activities .btn:hover {
+    background-color: #003c73;
+}

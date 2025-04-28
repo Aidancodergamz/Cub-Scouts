@@ -1,0 +1,84 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar container */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+/* Navbar links container */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Individual list items (nav links) */
+.nav-links li {
+    margin: 0 15px;
+}
+
+/* Navbar links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* Tablet and mobile view - Stacks the links vertically */
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding: 12px;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* Mobile view - Further stack and adjust for smaller screens */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding: 12px;
+        width: 100%;
+        text-align: left;
+    }
+}
