@@ -15,22 +15,71 @@ body {
 .navbar {
     background-color: #333;
     padding: 10px 20px;
+    position: relative;
+    z-index: 999;
 }
 
-/* Navbar links container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo styling */
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Hamburger icon container */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* Hamburger bars */
+.hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.6s ease;
+}
+
+/* Animate into X when active */
+.hamburger.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Navbar links (default desktop view) */
 .nav-links {
     list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
-/* Individual list items (nav links) */
 .nav-links li {
     margin: 0 15px;
 }
 
-/* Navbar links */
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -39,46 +88,61 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Hover effect for links */
 .nav-links a:hover {
     background-color: #575757;
     border-radius: 4px;
 }
 
-/* Tablet and mobile view - Stacks the links vertically */
-@media screen and (max-width: 1024px) {
-    .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .nav-links a {
-        font-size: 18px;
-        padding: 12px;
-        width: 100%;
-        text-align: left;
-    }
+/* Fullscreen overlay for mobile/tablet */
+.nav-links.mobile {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
 }
 
-/* Mobile view - Further stack and adjust for smaller screens */
-@media screen and (max-width: 768px) {
+.nav-links.mobile.active {
+    display: flex;
+}
+
+/* Styles for links in overlay */
+.nav-links.mobile li {
+    margin: 20px 0;
+}
+
+.nav-links.mobile a {
+    font-size: 24px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+/* X Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-links.mobile.active .close-btn {
+    display: block;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 1024px) {
+    .hamburger {
+        display: flex;
+    }
+
     .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .nav-links a {
-        font-size: 18px;
-        padding: 12px;
-        width: 100%;
-        text-align: left;
+        display: none;
     }
 }

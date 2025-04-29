@@ -17,8 +17,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php include "navigation.php"; ?>
+    <script src="<?= ROOT_DIR ?>assets/js/hamburger.js" defer></script>
 </body>
 </html>
-
-<?php include "navigation.php"; ?>
