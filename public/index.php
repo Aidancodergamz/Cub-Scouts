@@ -31,7 +31,7 @@ include "includes/header.php";
         <div class="container">
             <h2>What We Do</h2>
             <p>From hiking and camping to team-building activities and charity work, our Cubs get involved in a wide range of exciting experiences.</p>
-            <a href="<?= ROOT_DIR ?>activities" class="btn">Explore Activities</a>
+            <a href="<?= ROOT_DIR ?>games" class="btn">Explore Activities</a>
         </div>
     </section>
     
