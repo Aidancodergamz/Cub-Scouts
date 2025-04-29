@@ -18,6 +18,6 @@
 </head>
 <body>
     <?php include "navigation.php"; ?>
-    <script src="<?= ROOT_DIR ?>assets/js/hamburger.js" defer></script>
+    <script src="<?= ROOT_DIR ?>assets/js/hamburger.js"></script>
 </body>
 </html>
