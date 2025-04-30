@@ -10,6 +10,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Games Page</h1>
+    <h1>Gallery Page</h1>
 </body>
 </html>
