@@ -15,6 +15,7 @@
                 <li><a href="<?= ROOT_DIR ?>">Home</a></li>
                 <li><a href="<?= ROOT_DIR ?>about">About</a></li>
                 <li><a href="<?= ROOT_DIR ?>gallery">Gallery</a></li>
+                <li><a href="<?= ROOT_DIR ?>contact">Contact</a></li>
                 <li><a href="<?= ROOT_DIR ?>signin">Sign In</a></li>
                 <li><a href="<?= ROOT_DIR ?>register">Register</a></li>
             <?php endif; ?>

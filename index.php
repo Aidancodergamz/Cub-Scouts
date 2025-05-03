@@ -5,6 +5,7 @@ $routes = [
     '' => 'public/index.php', 
     'gallery' => 'public/gallery.php',
     'about' => 'public/about.php',
+    'contact' => 'public/contact.php',
     'signin' => 'public/signin.php',
     'register' => 'public/register.php',
 ];
