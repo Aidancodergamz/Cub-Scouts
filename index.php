@@ -3,13 +3,14 @@ $url = isset($_GET['url']) ? rtrim($_GET['url'], '/') : '';
 
 $routes = [
     '' => 'public/index.php', 
+    'logout' => 'handlers/logout.php',
     'gallery' => 'public/gallery.php',
     'about' => 'public/about.php',
     'contact' => 'public/contact.php',
     'sign_in' => 'public/signin.php',
     'register' => 'public/register.php',
     'success' => 'messages/register-success.php',
-
+    'contact_message' => 'messages/contact-message.php',
     '404' => '404.php',
 ];
 

@@ -13,7 +13,7 @@
   <div class="contact-container">
     <h2 class="contact-h2">Contact Us</h2>
     <p class="intro">Are you a parent or carer interested in getting your child involved with the Obanshire Cub Scouts? If so, We'd love to hear from you. Please get in touch with us below!</p>
-    <form action="/Cub-Scouts/sign_in" method="POST">
+    <form action="/Cub-Scouts/contact_message" method="POST">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
 

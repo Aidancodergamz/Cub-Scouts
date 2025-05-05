@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/register.css">
+    <link rel="stylesheet" href="assets/css/sign-in.css">
     <link rel="stylesheet" href="assets/css/404.css">
+    <link rel="stylesheet" href="assets/css/confirmation-message.css">
     <!-- <title>Obanshire Cub Scouts</title> -->
 </head>
 <body>

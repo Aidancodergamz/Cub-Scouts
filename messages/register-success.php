@@ -14,7 +14,7 @@
     <div class="success-container">
         <div class="success-message">
             <h2>Registration Successful!</h2>
-            <p>Congratulations! Your account has been created successfully.</p>
+            <p>Congratulations! Your account has been created successfully. You can now log into your account below.</p>
             <a href="/Cub-Scouts/sign_in" class="btn">Go to Login</a>
         </div>
     </div>
