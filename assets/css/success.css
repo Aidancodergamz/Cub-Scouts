@@ -1,0 +1,73 @@
+.success-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Success message box */
+.success-message {
+    background-color: #28a745; /* Vibrant green */
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.success-message h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.success-message p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.success-message .btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #007bff; /* Vibrant blue for the button */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.success-message .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .success-message h2 {
+        font-size: 28px;
+    }
+
+    .success-message p {
+        font-size: 16px;
+    }
+
+    .success-message .btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .success-message h2 {
+        font-size: 24px;
+    }
+
+    .success-message p {
+        font-size: 14px;
+    }
+
+    .success-message .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

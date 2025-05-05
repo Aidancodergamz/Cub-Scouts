@@ -6,8 +6,11 @@ $routes = [
     'gallery' => 'public/gallery.php',
     'about' => 'public/about.php',
     'contact' => 'public/contact.php',
-    'signin' => 'public/signin.php',
+    'sign_in' => 'public/signin.php',
     'register' => 'public/register.php',
+    'success' => 'messages/register-success.php',
+
+    '404' => '404.php',
 ];
 
 if (array_key_exists($url, $routes)) {

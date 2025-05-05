@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/contact.css">
-    <title>Obanshire Cub Scouts</title>
+    <link rel="stylesheet" href="assets/css/register.css">
+    <link rel="stylesheet" href="assets/css/404.css">
+    <!-- <title>Obanshire Cub Scouts</title> -->
 </head>
 <body>
     <?php include "navigation.php"; ?>

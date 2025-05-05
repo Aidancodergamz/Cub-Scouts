@@ -7,13 +7,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Contact Obanshire Cub Scouts</title>
 </head>
 <body>
   <div class="contact-container">
     <h2 class="contact-h2">Contact Us</h2>
     <p class="intro">Are you a parent or carer interested in getting your child involved with the Obanshire Cub Scouts? If so, We'd love to hear from you. Please get in touch with us below!</p>
-    <form action="YOUR_FORM_HANDLER_URL" method="POST">
+    <form action="/Cub-Scouts/sign_in" method="POST">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
 
