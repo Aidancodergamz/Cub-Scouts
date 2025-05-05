@@ -13,7 +13,7 @@ A PHP web application for managing Cub Scouts activities.
 
 1. Clone or copy this project into `C:\xampp\htdocs`.
 2. Start Apache and MySQL in XAMPP.
-3. Import the `cub-scouts.sql` file into phpMyAdmin.
+3. Import the `cub_scouts.sql` file into phpMyAdmin.
 4. Visit `http://localhost/Cub-Scouts/` in your browser.
 
 ## Folder Structure
