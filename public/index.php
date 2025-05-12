@@ -20,18 +20,28 @@
     </section>
 
     <section class="intro">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Obanshire Cub Scouts is a community-based scouting group for children aged 8 to 10. We aim to provide young people with exciting and educational activities to help them build confidence, leadership skills, and lifelong friendships.</p>
-            <a href="<?= ROOT_DIR ?>about" class="btn">Read More</a>
+        <div class="container flex-row">
+            <div class="image">
+                <img src="assets/images/scouts_walk.jpg" alt="Cub Scouts Group" style="width:100%; max-width:400px; height:auto;">
+            </div>
+            <div class="text">
+                <h2>About Us</h2>
+                <p>Obanshire Cub Scouts is a community-based scouting group for children aged 6 to 12. We aim to provide young people with exciting and educational activities to help them build confidence, leadership skills, and lifelong friendships.</p>
+                <a href="<?= ROOT_DIR ?>about" class="btn">Read More</a>
+            </div>
         </div>
     </section>
 
     <section class="activities">
-        <div class="container">
-            <h2>What We Do</h2>
-            <p>From hiking and camping to team-building activities and charity work, our Cubs get involved in a wide range of exciting experiences.</p>
-            <a href="<?= ROOT_DIR ?>games" class="btn">Explore Activities</a>
+        <div class="container flex-row-reverse">
+            <div class="image">
+                <img src="assets/images/what_we_do.jpg" alt="Scouting Activities" style="width:100%; max-width:400px; height:auto;">
+            </div>
+            <div class="text">
+                <h2>What We Do</h2>
+                <p>From hiking and camping to team-building activities and charity work, our Cubs get involved in a wide range of exciting experiences.</p>
+                <a href="<?= ROOT_DIR ?>games" class="btn">Explore Activities</a>
+            </div>
         </div>
     </section>
     

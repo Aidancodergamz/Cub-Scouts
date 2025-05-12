@@ -11,6 +11,7 @@ $routes = [
     'register' => 'public/register.php',
     'success' => 'messages/register-success.php',
     'contact_message' => 'messages/contact-message.php',
+    'newsfeed' => 'public/news.php',
     '404' => '404.php',
 
     //Handler pages are here
@@ -18,9 +19,11 @@ $routes = [
 
     // I've put all admin related pages here
     'admin_dash' => 'public/admin/dashboard.php',
+    'users' => 'public/admin/users.php',
 
     //All the parent related pages are here
     'parent_dash' => 'public/parent/dashboard.php',
+    'myscout' => 'public/parent/myscout.php',
 
     //All Scout related pages are here
     'scout_dash' => 'public/scout/dashboard.php',

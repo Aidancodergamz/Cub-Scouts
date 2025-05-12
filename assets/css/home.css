@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero {
-    background-color: #0099cc;
+    background-color: #333;
     color: white;
     padding: 100px 20px;
     text-align: center;
@@ -45,7 +45,8 @@
 .intro p {
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin: 2rem 0rem;
+    /* margin-bottom: 20px; */
 }
 
 .intro .btn {
@@ -92,4 +93,54 @@
 
 .activities .btn:hover {
     background-color: #003c73;
+}
+
+/* Shared Flex Container for Sections */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Standard layout: Image left, Text right */
+.flex-row {
+    flex-direction: row;
+}
+
+/* Reversed layout: Image right, Text left */
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Image styling */
+.image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Text block styling */
+.text {
+    max-width: 600px;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .text {
+        max-width: 100%;
+    }
+
+    .intro p {
+        margin: 2rem 0; /* override wide desktop margin on small screens */
+    }
 }

@@ -10,6 +10,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Parent Dash</h1>
+    <h1>My Scout</h1>
 </body>
 </html>

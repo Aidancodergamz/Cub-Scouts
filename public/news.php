@@ -10,6 +10,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Parent Dash</h1>
+    <h1>Newsfeed Page</h1>
 </body>
 </html>
