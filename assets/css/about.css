@@ -1,40 +1,39 @@
-/* Layout Container */
-.container {
+/* Main Page Container */
+.about-page {
     max-width: 960px;
     margin: 0 auto;
-    padding: 1rem;
     background-color: #fff;
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Headings */
-h1 {
+.about-intro h1 {
     font-size: 2rem;
-    margin-bottom: 1rem;
     color: #0055a5;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
-h2 {
+.about-page h2 {
     font-size: 1.5rem;
+    color: #2e7d32;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
-    color: #007b33;
 }
 
-/* Paragraphs */
-p {
+/* Paragraphs & Lists */
+.about-page p {
     margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
-/* Lists */
-ul {
+.activities-list {
     margin-left: 1.5rem;
-    margin-bottom: 1rem;
 }
 
-ul li {
+.activities-list li {
     margin-bottom: 0.5rem;
 }
 
@@ -48,18 +47,55 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Leader Section */
+.leaders-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.leader-card {
+    flex: 1 1 260px;
+    background-color: #0055a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.leader-card img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.leader-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.leader-card:hover {
+    scale: 1.2;
+    border: 2px solid black;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 1.75rem;
+    .about-page {
+        padding: 1.5rem;
     }
 
-    h2 {
-        font-size: 1.25rem;
+    .leaders-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .container {
-        padding: 1rem;
+    .leader-card {
+        width: 100%;
+        max-width: 400px;
     }
 }
 
@@ -68,15 +104,15 @@ a:hover {
         font-size: 15px;
     }
 
-    h1 {
+    .about-intro h1 {
         font-size: 1.5rem;
     }
 
-    h2 {
-        font-size: 1.1rem;
+    .about-page h2 {
+        font-size: 1.25rem;
     }
 
-    .container {
-        padding: 0.75rem;
+    .about-page {
+        padding: 1rem;
     }
 }

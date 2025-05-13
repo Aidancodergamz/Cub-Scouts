@@ -40,8 +40,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<div class="container">
-    <div class="login-box">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/sign-in.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sign-in-container">
+    <div class="sign-in-login-box">
         <h2>Sign In</h2>
         <!-- Display error message if set -->
         <?php if ($error): ?>
@@ -49,13 +58,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
 
         <!-- Sign In form -->
-        <form method="POST" action="/Cub-Scouts/sign_in">
-            <div class="form-group">
+        <form class="sign-in-form" method="POST" action="/Cub-Scouts/sign_in">
+            <div class="sign-in-form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" required>
             </div>
 
-            <div class="form-group">
+            <div class="sign-in-form-group">
                 <label for="password">Password</label>
                 <input type="password" name="password" required>
             </div>
@@ -64,3 +73,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 </div>
+</body>
+</html>

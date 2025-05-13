@@ -1,146 +1,125 @@
+/* Reusable Button Styles */
+.home-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #fff;
+    color: #0055a5;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Hero Section */
-.hero {
+.home-hero {
     background-color: #333;
-    color: white;
-    padding: 100px 20px;
+    color: var(--light-text);
+    padding: 8rem 2rem;
     text-align: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.hero .btn {
-    padding: 10px 20px;
-    background-color: #003c73;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.hero .btn:hover {
-    background-color: #005ea2;
-}
-
-/* Introduction Section */
-.intro {
-    background-color: #ffffff;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.intro h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.intro p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 2rem 0rem;
-    /* margin-bottom: 20px; */
-}
-
-.intro .btn {
-    padding: 10px 20px;
-    background-color: #005ea2;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.intro .btn:hover {
-    background-color: #003c73;
-}
-
-/* Activities Section */
-.activities {
-    background-color: #f4f4f4;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.activities h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.activities p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.activities .btn {
-    padding: 10px 20px;
-    background-color: #005ea2;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.activities .btn:hover {
-    background-color: #003c73;
-}
-
-/* Shared Flex Container for Sections */
-.container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    padding: 20px;
-    text-align: left;
+    flex-direction: column;
 }
 
-/* Standard layout: Image left, Text right */
-.flex-row {
+.home-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.home-hero p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin-bottom: 2rem;
+    color: white;
+}
+
+/* Section Containers */
+.home-intro,
+.home-activities {
+    padding: 4rem 2rem;
+}
+
+.home-intro {
+    background-color: #fff;
+}
+
+.home-activities {
+    background-color: var(--secondary-color);
+}
+
+/* Section Titles */
+.home-intro h2,
+.home-activities h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Section Paragraphs */
+.home-intro p,
+.home-activities p {
+    font-size: 1.1rem;
+    margin: 1rem 0 2rem;
+    max-width: 60ch;
+}
+
+/* Flex Container for Image and Text Layout */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 2rem 1rem;
+}
+
+.home-flex-row {
     flex-direction: row;
 }
 
-/* Reversed layout: Image right, Text left */
-.flex-row-reverse {
+.home-flex-row-reverse {
     flex-direction: row-reverse;
 }
 
-/* Image styling */
-.image img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
+/* Image Container */
+.home-image {
+    flex: 1 1 300px;
+    max-width: 500px;
 }
 
-/* Text block styling */
-.text {
+.home-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed);
+}
+
+.home-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Text Block */
+.home-text {
+    flex: 1 1 300px;
     max-width: 600px;
 }
 
-/* Responsive layout for mobile */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .container {
+    .home-container {
         flex-direction: column !important;
         text-align: center;
     }
 
-    .text {
+    .home-text,
+    .home-image {
         max-width: 100%;
     }
 
-    .intro p {
-        margin: 2rem 0; /* override wide desktop margin on small screens */
+    .home-hero {
+        padding: 5rem 1rem;
     }
 }

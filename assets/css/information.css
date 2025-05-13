@@ -1,0 +1,86 @@
+/* Header Section */
+.information-header {
+    background-color: #004d99;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid #003366;
+}
+
+.information-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.information-header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Main Content */
+.information-main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.information-main h2, 
+.information-main h3 {
+    color: #004d99;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.information-main p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+}
+
+.information-main a.information-disclosure-link {
+    display: inline-block;
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.information-main a.information-disclosure-link:hover {
+    background-color: #005fa3;
+}
+
+/* Helper Roles List */
+.information-helper-roles {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.information-helper-roles li {
+    background-color: #e6f2ff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #007acc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .information-header h1 {
+        font-size: 2rem;
+    }
+
+    .information-main {
+        padding: 20px 15px;
+    }
+
+    .information-main h2, .information-main h3 {
+        font-size: 1.3rem;
+    }
+}

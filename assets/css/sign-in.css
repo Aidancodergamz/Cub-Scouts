@@ -1,58 +1,110 @@
-/* Login box styling */
-.login-box {
-    background-color: #ffffff;
-    padding: 40px;
-    margin: 80px auto;
-    max-width: 400px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+/* Fullscreen Centering Container */
+.sign-in-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f6f8;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+
+/* Login Box Styling */
+.sign-in-login-box {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    max-width: 420px;
+    width: 100%;
     text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-.login-box h2 {
+/* Heading */
+.sign-in-login-box h2 {
     margin-bottom: 25px;
-    color: #333;
+    font-size: 28px;
+    color: #222;
+    font-weight: 700;
 }
 
-.form-group {
+/* Error Message */
+.error {
+    background-color: #e53935;
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Form Group */
+.sign-in-form-group {
     margin-bottom: 20px;
     text-align: left;
 }
 
-.form-group label {
+.sign-in-form-group label {
     display: block;
-    margin-bottom: 6px;
-    font-weight: bold;
-    color: #444;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
 }
 
-.form-group input {
+.sign-in-form-group input {
     width: 100%;
-    padding: 12px;
+    padding: 12px 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+.sign-in-form-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+/* Button */
 .btn {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
     width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
     background-color: #0056b3;
+    transform: translateY(-1px);
+    outline: none;
 }
 
-.error {
-    background-color: #f44336;
-    color: white;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 4px;
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive Tweak */
+@media (max-width: 480px) {
+    .sign-in-login-box {
+        padding: 30px 20px;
+    }
 }
