@@ -38,3 +38,4 @@ if (array_key_exists($url, $routes)) {
     require '404.php';
 }
 ?>
+<!-- Testing -->
