@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2025 at 02:15 AM
+-- Generation Time: May 13, 2025 at 08:50 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -28,13 +28,31 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `images` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `filename` varchar(255) NOT NULL,
-  `filepath` text NOT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `status` varchar(20) DEFAULT 'pending' CHECK (`status` in ('pending','approved','rejected'))
+  `id` int(11) NOT NULL,
+  `image_name` varchar(255) NOT NULL,
+  `image_path` varchar(255) NOT NULL,
+  `uploaded_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`id`, `image_name`, `image_path`, `uploaded_at`) VALUES
+(63, 'profile_1.jpg', 'public/assets/uploads/profile_1.jpg', '2025-05-13 18:38:30'),
+(64, 'profile_2.jpg', 'public/assets/uploads/profile_2.jpg', '2025-05-13 18:38:38'),
+(65, 'profile_3.jpg', 'public/assets/uploads/profile_3.jpg', '2025-05-13 18:38:45'),
+(66, 'pauline-loroy-A9U0cMNsxwY-unsplash.jpg', 'public/assets/uploads/pauline-loroy-A9U0cMNsxwY-unsplash.jpg', '2025-05-13 18:41:32'),
+(67, 'maks_gnatovskyi01-ETT2xLg7zBY-unsplash.jpg', 'public/assets/uploads/maks_gnatovskyi01-ETT2xLg7zBY-unsplash.jpg', '2025-05-13 18:41:43'),
+(68, 'Screenshot 2025-05-13 182858.png', 'public/assets/uploads/Screenshot 2025-05-13 182858.png', '2025-05-13 18:41:51'),
+(69, 'mael-balland-VDKV4Xd0nTc-unsplash.jpg', 'public/assets/uploads/mael-balland-VDKV4Xd0nTc-unsplash.jpg', '2025-05-13 18:42:08'),
+(70, 'pauline-loroy-A9U0cMNsxwY-unsplash.jpg', 'public/assets/uploads/pauline-loroy-A9U0cMNsxwY-unsplash.jpg', '2025-05-13 18:44:50'),
+(71, 'profile_2.jpg', 'public/assets/uploads/profile_2.jpg', '2025-05-13 18:45:07'),
+(72, 'annie-spratt-zIKZF9ef2VM-unsplash.jpg', 'public/assets/uploads/annie-spratt-zIKZF9ef2VM-unsplash.jpg', '2025-05-13 18:45:13'),
+(73, 'jorgen-larsen-wG1jeM4jPuM-unsplash.jpg', 'public/assets/uploads/jorgen-larsen-wG1jeM4jPuM-unsplash.jpg', '2025-05-13 18:45:19'),
+(74, 'profile_1.jpg', 'public/assets/uploads/profile_1.jpg', '2025-05-13 18:47:35'),
+(75, 'jorgen-larsen-wG1jeM4jPuM-unsplash.jpg', 'public/assets/uploads/jorgen-larsen-wG1jeM4jPuM-unsplash.jpg', '2025-05-13 18:47:41'),
+(76, 'maks_gnatovskyi01-ETT2xLg7zBY-unsplash.jpg', 'public/assets/uploads/maks_gnatovskyi01-ETT2xLg7zBY-unsplash.jpg', '2025-05-13 18:47:50');
 
 -- --------------------------------------------------------
 
@@ -57,7 +75,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `user_type`) VALUES
 (38, 'Admin', '$2y$10$PWcAC2HlGiee7b6Rskk4M.//YBjcUS82LlhzNtTk47DzfVwF9IYgi', 'admin@gmail.com', 'admin'),
 (39, 'Parent', '$2y$10$FUSqExyHdqw5Kg2jpMhUPuzig3IimibI1CjLynydkXPFh9CkgJ4Zu', 'parent@outlook.com', 'parent'),
-(40, 'scout', '$2y$10$JrOQ71FTIdec03wHM8tlz.W.rVmmNSTdjORzUCyAfr77LCCZGD9zu', 'scout@hotmail.co.uk', 'scout');
+(40, 'scout', '$2y$10$JrOQ71FTIdec03wHM8tlz.W.rVmmNSTdjORzUCyAfr77LCCZGD9zu', 'scout@hotmail.co.uk', 'scout'),
+(44, 'sdasfda', '$2y$10$QibrZK6pDBmLSuoJqN9dhOcXX.MQennIMevb3Cj9pg8j2ufpAASMS', 'dffdssdlk@dfskdf.com', 'scout');
 
 --
 -- Indexes for dumped tables
@@ -85,13 +104,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
