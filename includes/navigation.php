@@ -27,7 +27,6 @@
                     <li><a href="<?= ROOT_DIR ?>gallery">Gallery</a></li>
                     <li><a href="<?= ROOT_DIR ?>users">Manage Users</a></li>
                     <li><a href="<?= ROOT_DIR ?>newsfeed">Newsfeed</a></li>
-                    <li><a href="<?= ROOT_DIR ?>admin/settings">Site Settings</a></li>
 
                 <?php elseif ($_SESSION['user_type'] === 'parent'): ?>
                     <li><a href="<?= ROOT_DIR ?>parent_dash">Parent Dash</a></li>
