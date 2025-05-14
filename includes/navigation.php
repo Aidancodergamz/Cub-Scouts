@@ -42,7 +42,7 @@
                 <?php endif; ?>
 
                 <!-- Common links for all logged-in users -->
-                <li><a href="<?= ROOT_DIR ?>handlers/logout.php">Logout</a></li>
+                <li><a href="<?= ROOT_DIR ?>handlers/logout.php" onclick="return confirm ('Are you sure you want to log out?')">Logout</a></li>
             <?php endif; ?>
         </ul>
     </div>
