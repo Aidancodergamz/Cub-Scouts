@@ -14,7 +14,7 @@
     <main class="about-page">
         <section class="about-intro">
             <h1>About Obanshire Cub Scouts</h1>
-            <p>Welcome to <strong>Obanshire Cub Scouts</strong>! We're a fun and friendly Cub Scout pack based in beautiful Obanshire. Our Cubs are boys and girls aged 8 to 10½ who meet weekly to explore, play, and learn.</p>
+            <p>Welcome to <strong>Obanshire Cub Scouts</strong>! We're a fun and friendly Cub Scout pack based in beautiful Obanshire. Our Cubs are boys and girls aged 6 to 12 who meet weekly to explore, play, and learn.</p>
         </section>
 
         <section class="about-activities">
@@ -40,18 +40,18 @@
             <div class="leaders-container">
                 <div class="leader-card">
                     <img src="./assets/images/leaders/profile_1.jpg" alt="Akela - Sarah Thompson">
-                    <h3>Akela - Sarah Thompson</h3>
-                    <p>Sarah loves leading adventures and teaching Cubs outdoor survival skills. She's been part of our group for 6 years.</p>
+                    <h3>Mike Douglas</h3>
+                    <p>Mike loves leading adventures and teaching Cubs outdoor survival skills. He's been part of our group for 6 years.</p>
                 </div>
                 <div class="leader-card">
                     <img src="./assets/images/leaders/profile_2.jpg" alt="Baloo - Mike Douglas">
-                    <h3>Baloo - Mike Douglas</h3>
-                    <p>Mike brings energy and fun to every meeting, especially games and campfire songs. He's a former Cub himself!</p>
+                    <h3>Jenny McDonald</h3>
+                    <p>Jenny brings energy and fun to every meeting, especially games and campfire songs. She's a former Cub herself!</p>
                 </div>
                 <div class="leader-card">
                     <img src="./assets/images/leaders/profile_3.jpg" alt="Raksha - Amina Begum">
-                    <h3>Raksha - Amina Begum</h3>
-                    <p>Amina is a brilliant organiser and helps Cubs achieve their badges with confidence and creativity.</p>
+                    <h3>Sarah Mitchell</h3>
+                    <p>Sarah is a brilliant organiser and helps Cubs achieve their badges with confidence and creativity.</p>
                 </div>
             </div>
         </section>

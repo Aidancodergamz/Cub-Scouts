@@ -9,7 +9,7 @@
     include 'config/config.php';
 
 
-$sql = "SELECT id, username, email, user_type FROM users ORDER BY id ASC";
+$sql = "SELECT id, first_name, surname, username, email, user_type FROM users ORDER BY id ASC";
 $result = mysqli_query($conn, $sql);
 
 ?>
@@ -29,6 +29,8 @@ $result = mysqli_query($conn, $sql);
         <thead>
           <tr>
             <th>ID</th>
+            <th>First Name</th>
+            <th>Surname</th>
             <th>Username</th>
             <th>Email</th>
             <th>Role</th>
@@ -40,13 +42,15 @@ $result = mysqli_query($conn, $sql);
             <?php while ($user = mysqli_fetch_assoc($result)): ?>
               <tr>
                 <td data-label="ID"><?= htmlspecialchars($user['id']) ?></td>
+                <td data-label="first_name"><?= htmlspecialchars($user['first_name']) ?></td>
+                <td data-label="surname"><?= htmlspecialchars($user['surname']) ?></td>
                 <td data-label="Username"><?= htmlspecialchars($user['username']) ?></td>
                 <td data-label="Email"><?= htmlspecialchars($user['email']) ?></td>
                 <td data-label="Role"><?= htmlspecialchars($user['user_type']) ?></td>
 
                 <td data-label="Actions">
                 <a href="edit-user.php?id=<?= $user['id'] ?>" class="btn-edit">Edit</a>
-                <a href="handlers/delete_user.php?id=<?= $user['id'] ?>" class="btn-delete" onclick="return confirm('Are you sure?')">Delete</a>
+                <a href="handlers/delete_user.php?id=<?= $user['id'] ?>" class="btn-delete" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
                 </td>
 
               </tr>

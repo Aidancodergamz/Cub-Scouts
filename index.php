@@ -12,7 +12,8 @@ $routes = [
     'info' => 'public/information.php',
     'success' => 'messages/register-success.php',
     'contact_message' => 'messages/contact-message.php',
-    'newsfeed' => 'public/news.php',
+    'newsfeed' => 'public/newsfeed.php',
+    'postnews' => 'handlers/post_newsfeed.php',
     '404' => '404.php',
 
     //Handler pages are here

@@ -24,6 +24,11 @@
 
     // Fetch user data
     $user = mysqli_fetch_assoc($result);
+
+    if ($user['user_type'] !== 'scout') {
+        die("You are not authorized to access this page.");
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -43,6 +48,8 @@
 
     <section>
       <h3>Profile Details</h3>
+      <p><strong>First Name:</strong> <?= htmlspecialchars($user['first_name']) ?></p>
+      <p><strong>First Name:</strong> <?= htmlspecialchars($user['surname']) ?></p>
       <p><strong>Email:</strong> <?= htmlspecialchars($user['email']) ?></p>
       <p><strong>User Type:</strong> <?= htmlspecialchars($user['user_type']) ?></p>
     </section>

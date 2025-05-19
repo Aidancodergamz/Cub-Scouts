@@ -1,0 +1,123 @@
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+/* Newsfeed Section */
+.newsfeed-container {
+    width: 90%;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.newsfeed-post {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.newsfeed-post h3 {
+    font-size: 1.1em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.newsfeed-post p {
+    font-size: 1em;
+    color: #555;
+}
+
+.newsfeed-post time {
+    font-size: 0.85em;
+    color: #999;
+}
+
+/* Admin Post Form */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Authorization Message */
+.unauthorized-message {
+    color: red;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .newsfeed-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .newsfeed-post {
+        padding: 10px;
+    }
+
+    .newsfeed-post h3 {
+        font-size: 1em;
+    }
+
+    .newsfeed-post p {
+        font-size: 0.95em;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    button {
+        padding: 8px 12px;
+    }
+}
