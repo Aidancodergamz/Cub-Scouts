@@ -1,20 +1,16 @@
 <?php
     include 'config/config.php';
     include 'includes/header.php';
-// signup.php
-// Handle form submission (basic version, no database yet)
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $first_name = $_POST["first_name"];
+    $surname = $_POST["surname"];
     $email = $_POST["email"];
     $username = $_POST["username"];
     $password = $_POST["password"];
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     $role = $_POST["user_type"];
-
-    // For now, just output the values (in real use, you'd validate & save to DB)
-    echo "<p>Signed up with:</p>";
-    echo "Email: $email<br>";
-    echo "Username: $username<br>";
-    echo "Role: $role<br>";
+    
     exit;
 }
 ?>
@@ -30,6 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <div class="register-container">
         <h2 class="register-title">Create an Account</h2>
         <form method="POST" action="handlers/register_process.php" class="register-form">
+            <label for="first_name" class="register-label">First Name:</label>
+            <input type="text" name="first_name" id="first_name" class="register-input" required>
+            
+            <label for="surname" class="register-label">Surname:</label>
+            <input type="surname" name="surname" id="surname" class="register-input" required>
+
             <label for="email" class="register-label">Email:</label>
             <input type="email" name="email" id="email" class="register-input" required>
 

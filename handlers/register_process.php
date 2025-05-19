@@ -5,6 +5,8 @@ include '../config/config.php';
 // Handle form submission
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Get form data
+    $first_name = $_POST["first_name"];
+    $surname = $_POST["surname"];
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $username = htmlspecialchars($_POST["username"]);
     $password = $_POST["password"];
@@ -37,8 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Insert user into the database
-    $stmt = $conn->prepare("INSERT INTO users (email, username, password, user_type) VALUES (?, ?, ?, ?)");
-    $stmt->execute([$email, $username, $hashed_password, $role]);
+    $stmt = $conn->prepare("INSERT INTO users (first_name, surname, email, username, password, user_type) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->execute([$first_name, $surname, $email, $username, $hashed_password, $role]);
 
     // Redirect to a success page or display a success message
     // echo "Registration successful!";
