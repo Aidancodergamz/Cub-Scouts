@@ -10,7 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = $_POST["password"];
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     $role = $_POST["user_type"];
-    
     exit;
 }
 ?>

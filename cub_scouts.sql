@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2025 at 05:37 PM
+-- Generation Time: May 20, 2025 at 06:25 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -84,6 +84,29 @@ INSERT INTO `newsfeed` (`id`, `message`, `posted_by`, `timestamp`, `is_admin_pos
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `scouts`
+--
+
+CREATE TABLE `scouts` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `first_name` varchar(100) DEFAULT NULL,
+  `surname` varchar(100) DEFAULT NULL,
+  `link_code` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `scouts`
+--
+
+INSERT INTO `scouts` (`id`, `user_id`, `first_name`, `surname`, `link_code`) VALUES
+(2, NULL, 'Danial', 'La Russo', '1785SNYW'),
+(3, 74, 'Scott', 'Woodcock', 'H67PWAMZ'),
+(4, 76, 'Aidan', 'O\'Rourke', 'B0UA5IVH');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -104,7 +127,11 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `user_type`, `first_name`, `surname`) VALUES
 (64, 'mickyboy', '$2y$10$MrMzQp6x3wum9vnUWIL0W.L77mG.aR37w/KwyhBiWRN.55hU.IpXq', 'Mdougie@hotmail.co.uk', 'admin', 'Mike', 'Douglas'),
 (65, 'Scout', '$2y$10$wk1e4T39KRI0oZETRUubLuqsUNzgMyZP55szq1Tn1ZT96atYDnGh.', 'aidanorourke@hotmail.co.uk', 'scout', 'Aidan', 'O\'Rourke'),
-(66, 'martinboy', '$2y$10$F1TvFrWC.JmIKV1ScbNHYeQ42O4o2mjM8iwFypp2bJRMQYY3Rf3aG', 'martinorourke@gmail.com', 'parent', 'Martin', 'O\'Rourke');
+(66, 'martinboy', '$2y$10$F1TvFrWC.JmIKV1ScbNHYeQ42O4o2mjM8iwFypp2bJRMQYY3Rf3aG', 'martinorourke@gmail.com', 'parent', 'Martin', 'O\'Rourke'),
+(73, 'KarateKid', '$2y$10$mHZgrgiM0OduKhVSgwbyIe0Dg8iSI15nMAwEcgdXcN.56kPCI1Wz.', 'danny@gmail.com', 'scout', 'Danial', 'La Russo'),
+(74, 'pecker', '$2y$10$cGCzohRHC84vynNI2dmZLOLZobplw75SHBdx1bw/VwW4XxMEKXOcG', 'scott@hotmail.co.uk', 'scout', 'Scott', 'Woodcock'),
+(75, 'danny2k601', '$2y$10$IWg81s73tfmE76Q/UOBVVuX.dL1yOtozP.q1MQu0c094Yx5ZwlJRG', 'aiday@hotmail.co.uk', 'parent', 'Aidan', 'Mann'),
+(76, 'towlie', '$2y$10$MU1kvuzTvgjrJOi6izGx2.r7ZuPxJps2Lgl7piSz84sWZRl/M9VXS', 'ajkdjwk@hptsk.com', 'scout', 'Aidan', 'O\'Rourke');
 
 --
 -- Indexes for dumped tables
@@ -121,6 +148,14 @@ ALTER TABLE `images`
 --
 ALTER TABLE `newsfeed`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `scouts`
+--
+ALTER TABLE `scouts`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `link_code` (`link_code`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `users`
@@ -147,10 +182,26 @@ ALTER TABLE `newsfeed`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `scouts`
+--
+ALTER TABLE `scouts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `scouts`
+--
+ALTER TABLE `scouts`
+  ADD CONSTRAINT `scouts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

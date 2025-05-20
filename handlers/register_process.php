@@ -2,7 +2,6 @@
 // Include database connection and config file
 include '../config/config.php';
 
-// Handle form submission
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Get form data
     $first_name = $_POST["first_name"];
@@ -11,9 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = htmlspecialchars($_POST["username"]);
     $password = $_POST["password"];
     $confirm_password = $_POST["confirm_password"];
-    $role = $_POST["user_type"];
+    $user_type = $_POST["user_type"]; // use consistent naming
 
-    //Check that passwords are the same
+    // Check that passwords are the same
     if ($password !== $confirm_password) {
         echo "Passwords must match, please check password";
         exit;
@@ -28,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Hash the password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Check if email or username already exists in the database
+    // Check if email or username already exists
     $stmt = $conn->prepare("SELECT * FROM users WHERE email = ? OR username = ?");
     $stmt->execute([$email, $username]);
     $existing_user = $stmt->fetch();
@@ -38,14 +37,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    // Insert user into the database
+    // Insert into `users` table
     $stmt = $conn->prepare("INSERT INTO users (first_name, surname, email, username, password, user_type) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->execute([$first_name, $surname, $email, $username, $hashed_password, $role]);
+    $stmt->execute([$first_name, $surname, $email, $username, $hashed_password, $user_type]);
+    $user_id = $conn->insert_id; 
 
-    // Redirect to a success page or display a success message
-    // echo "Registration successful!";
-    header("Location: /Cub-Scouts/success");  // Redirect to the base URL
+
+    // Optional: Insert into `scouts` table if user is a scout
+    if ($user_type === 'scout') {
+        $link_code = substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, 8);
+
+        $stmt2 = $conn->prepare("INSERT INTO scouts (user_id, first_name, surname, link_code) VALUES (?, ?, ?, ?)");
+        $stmt2->execute([$user_id, $first_name, $surname, $link_code]);
+    }
+
+    // Success!
+    header("Location: /Cub-Scouts/success");
     exit;
-
 }
 ?>
