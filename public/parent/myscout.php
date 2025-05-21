@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['link_code'])) {
 
 // Get all linked scouts for this parent
 $linkedStmt = $conn->prepare("
-    SELECT u.first_name, u.surname 
+    SELECT u.id, u.first_name, u.surname 
     FROM users u
     INNER JOIN parent_scout_links psl ON u.id = psl.scout_id
     WHERE psl.parent_id = ?
@@ -98,10 +98,14 @@ $linkedScouts = $linkedStmt->get_result();
     </form>
 
     <h2>Your Linked Scouts:</h2>
-    <ul>
-        <?php while ($row = $linkedScouts->fetch_assoc()): ?>
-            <li><?php echo htmlspecialchars($row['first_name'] . ' ' . $row['surname']); ?></li>
-        <?php endwhile; ?>
-    </ul>
+<ul>
+<?php while ($row = $linkedScouts->fetch_assoc()): ?>
+    <li>
+        <a href="badges?id=<?php echo urlencode($row['id']); ?>">
+            <?php echo htmlspecialchars($row['first_name'] . ' ' . $row['surname']); ?>
+        </a>
+    </li>
+<?php endwhile; ?>
+</ul>
 </body>
 </html>

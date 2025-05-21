@@ -1,0 +1,40 @@
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    margin-top: 15px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+a {
+    display: inline-block;
+}

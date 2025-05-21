@@ -19,15 +19,19 @@ $routes = [
     //Handler pages are here
     'logout' => 'handlers/logout.php',
     'upload' => 'handlers/image_upload.php',
+    'edit_user' => 'handlers/edit_user.php',
+    'delete_user' => 'handlers/delete_user.php',
 
     // I've put all admin related pages here
     'admin_dash' => 'public/admin/dashboard.php',
     'users' => 'public/admin/users.php',
     'badgeaward' => 'public/admin/badge_award.php',
+    'about_parents' => 'public/admin/view_parent_details.php',
 
     //All the parent related pages are here
     'parent_dash' => 'public/parent/dashboard.php',
     'myscout' => 'public/parent/myscout.php',
+    'parent_details' => 'public/parent/details.php',
 
     //All Scout related pages are here
     'scout_dash' => 'public/scout/dashboard.php',

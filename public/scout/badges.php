@@ -9,7 +9,13 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-$scout_id = $_SESSION['user_id'];
+// Check if scout ID is passed via GET parameter and is numeric
+if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+    $scout_id = (int)$_GET['id'];
+} else {
+    // Otherwise use logged-in user's ID (scout viewing own badges)
+    $scout_id = $_SESSION['user_id'];
+}
 
 // Prepare and fetch badges for this user
 $stmt = $conn->prepare("
@@ -32,7 +38,7 @@ $result = $stmt->get_result();
     <link rel="stylesheet" href="assets/css/scout-badges.css" />
 </head>
 <body>
-    <h1>My Badges</h1>
+    <h1>Current Badges</h1>
 
     <?php if ($result->num_rows > 0): ?>
         <div class="badges-container">
@@ -46,7 +52,7 @@ $result = $stmt->get_result();
             <?php endwhile; ?>
         </div>
     <?php else: ?>
-        <p>You have not earned any badges yet.</p>
+        <p>This scout has not earned any badges yet.</p>
     <?php endif; ?>
 
 </body>
