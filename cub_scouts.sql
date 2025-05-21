@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2025 at 02:27 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: May 21, 2025 at 07:48 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -128,7 +128,8 @@ CREATE TABLE `parent_scout_links` (
 
 INSERT INTO `parent_scout_links` (`id`, `parent_id`, `scout_id`) VALUES
 (3, 77, 78),
-(4, 81, 80);
+(4, 81, 80),
+(5, 77, 83);
 
 -- --------------------------------------------------------
 
@@ -151,7 +152,7 @@ CREATE TABLE `scouts` (
 INSERT INTO `scouts` (`id`, `user_id`, `first_name`, `surname`, `link_code`) VALUES
 (5, 78, 'Aidan', 'O\'Rourke', 'L1HP9NEQ'),
 (6, 80, 'Danial', 'LaRusso', 'INC9EBGL'),
-(7, 82, 'Jay', 'Chou', 'USEQ5FHK');
+(8, 83, 'Caitlin', 'O\'Rourke', '6A9EIPMS');
 
 -- --------------------------------------------------------
 
@@ -179,7 +180,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `email`, `user_type`, `first_
 (79, 'Admin', '$2y$10$Kvyw/Z1jUjPLdLxVXImqsOxd675vkGquuZC7a2AyM.cMJVIedFU9m', 'mike@scouts.com', 'admin', 'Mike', 'Douglas'),
 (80, 'KarateKid', '$2y$10$dLLK9br7JYGTSYVa4WNGeOwsMM5dcU3xtKyUyKwAy7CXntAviBvEW', 'danial@gmail.com', 'scout', 'Danial', 'LaRusso'),
 (81, 'MiyagiSan', '$2y$10$h6YPWxiwW6Um4nE/Rw0AveXJv/JkhxVIWNzs2ZnUB3rr2ojdLOcjq', 'mrM@hotmail.jp', 'parent', 'Mr', 'Miyagi'),
-(82, 'jaysinger', '$2y$10$gwBiml1SBM0GzkqNivjLBeOOfHF8A8esUM5y357/QnrJHSDkCZVlm', 'jj@hotmail.com', 'scout', 'Jay', 'Chou');
+(83, 'cattie', '$2y$10$HaiVgO.G.QFDSOmWBdsTGul7EQjsACYV.OWa6tgzHHDkOOb44HB0q', 'caitlin@hotmail.com', 'scout', 'Caitlin', 'O\'Rourke');
 
 -- --------------------------------------------------------
 
@@ -210,7 +211,8 @@ INSERT INTO `user_badges` (`id`, `user_id`, `badge_id`, `awarded_by`, `awarded_a
 (17, 78, 7, 79, '2025-05-21 01:05:38'),
 (18, 78, 8, 79, '2025-05-21 01:05:42'),
 (19, 78, 9, 79, '2025-05-21 01:05:46'),
-(20, 78, 10, 79, '2025-05-21 01:05:52');
+(20, 78, 10, 79, '2025-05-21 01:05:52'),
+(21, 83, 4, 79, '2025-05-21 06:47:53');
 
 --
 -- Indexes for dumped tables
@@ -293,25 +295,25 @@ ALTER TABLE `newsfeed`
 -- AUTO_INCREMENT for table `parent_scout_links`
 --
 ALTER TABLE `parent_scout_links`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `scouts`
 --
 ALTER TABLE `scouts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `user_badges`
 --
 ALTER TABLE `user_badges`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Constraints for dumped tables
