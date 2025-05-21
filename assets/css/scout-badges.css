@@ -1,0 +1,74 @@
+.badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Badge card styling */
+.badge-card {
+    background-color: #f9f9f9;
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 220px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.badge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.badge-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.badge-title {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin: 10px 0 5px;
+}
+
+.badge-description {
+    font-size: 0.9rem;
+    color: #555;
+    min-height: 60px; /* keeps card height consistent */
+}
+
+.badge-awarded-date {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Responsive breakpoints */
+
+/* Large devices (desktops) - 3 cards per row */
+@media (min-width: 1024px) {
+    .badge-card {
+        width: 220px;
+    }
+}
+
+/* Medium devices (tablets) - 2 cards per row */
+@media (min-width: 600px) and (max-width: 1023px) {
+    .badge-card {
+        width: 45%;
+    }
+}
+
+/* Small devices (phones) - 1 card per row */
+@media (max-width: 599px) {
+    .badge-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+}

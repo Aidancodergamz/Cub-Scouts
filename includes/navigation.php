@@ -26,6 +26,7 @@
                     <li><a href="<?= ROOT_DIR ?>admin_dash">Admin Dash</a></li>
                     <li><a href="<?= ROOT_DIR ?>gallery">Gallery</a></li>
                     <li><a href="<?= ROOT_DIR ?>users">Manage Users</a></li>
+                    <li><a href="<?= ROOT_DIR ?>badgeaward">Badge Awards</a></li>
                     <li><a href="<?= ROOT_DIR ?>newsfeed">Newsfeed</a></li>
 
                 <?php elseif ($_SESSION['user_type'] === 'parent'): ?>

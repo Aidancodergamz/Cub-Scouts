@@ -23,6 +23,7 @@ $routes = [
     // I've put all admin related pages here
     'admin_dash' => 'public/admin/dashboard.php',
     'users' => 'public/admin/users.php',
+    'badgeaward' => 'public/admin/badge_award.php',
 
     //All the parent related pages are here
     'parent_dash' => 'public/parent/dashboard.php',

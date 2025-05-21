@@ -39,19 +39,19 @@
             
             <div class="leaders-container">
                 <div class="leader-card">
-                    <img src="./assets/images/leaders/profile_1.jpg" alt="Akela - Sarah Thompson">
+                    <img src="./assets/images/leaders/leader_1.jpg" alt="Akela - Sarah Thompson">
                     <h3>Mike Douglas</h3>
                     <p>Mike loves leading adventures and teaching Cubs outdoor survival skills. He's been part of our group for 6 years.</p>
                 </div>
                 <div class="leader-card">
-                    <img src="./assets/images/leaders/profile_2.jpg" alt="Baloo - Mike Douglas">
+                    <img src="./assets/images/leaders/leader_2.jpg" alt="Baloo - Mike Douglas">
                     <h3>Jenny McDonald</h3>
                     <p>Jenny brings energy and fun to every meeting, especially games and campfire songs. She's a former Cub herself!</p>
                 </div>
                 <div class="leader-card">
-                    <img src="./assets/images/leaders/profile_3.jpg" alt="Raksha - Amina Begum">
-                    <h3>Sarah Mitchell</h3>
-                    <p>Sarah is a brilliant organiser and helps Cubs achieve their badges with confidence and creativity.</p>
+                    <img src="./assets/images/leaders/leader_3.jpg" alt="Raksha - Amina Begum">
+                    <h3>Grant Mitchell</h3>
+                    <p>Grant is a brilliant organiser and helps Cubs achieve their badges with confidence and creativity.</p>
                 </div>
             </div>
         </section>

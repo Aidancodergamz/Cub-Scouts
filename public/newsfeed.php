@@ -37,7 +37,7 @@ if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'admin') {
     </form>
     <?php
 } else {
-    echo "You are not authorized to post messages.";
+    // echo "You are not authorized to post messages.";
 }
 ?>
 </body>

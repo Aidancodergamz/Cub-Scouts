@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2025 at 06:25 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: May 21, 2025 at 02:27 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,36 @@ SET time_zone = "+00:00";
 --
 -- Database: `cub_scouts`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `badges`
+--
+
+CREATE TABLE `badges` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` text DEFAULT NULL,
+  `image_path` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `badges`
+--
+
+INSERT INTO `badges` (`id`, `name`, `description`, `image_path`) VALUES
+(1, 'Adventure Badge', 'Awarded for completing an outdoor adventure task such as hiking or canoeing.', 'assets/images/badges/adventure_badge.png'),
+(2, 'First Aid Badge', 'Awarded for learning and demonstrating basic first aid skills.', 'assets/images/badges/first_aid_badge.png'),
+(3, 'Cooking Badge', 'Awarded for preparing a meal safely and hygienically.', 'assets/images/badges/cooking_badge.png'),
+(4, 'Environment Badge', 'Earned by completing activities that help the environment, like recycling or planting trees.', 'assets/images/badges/environment_badge.png'),
+(5, 'Teamwork Badge', 'Awarded for showing excellent teamwork during activities.', 'assets/images/badges/teamwork_badge.png'),
+(6, 'Fitness Challenge Badge', 'Earned by completing a series of physical fitness challenges.', 'assets/images/badges/fitness_badge.png'),
+(7, 'Navigator Badge', 'Awarded for successfully navigating and leading in an orienteering group.', 'assets/images/badges/navigator_badge.png'),
+(8, 'Water Safety Badge', 'Given after learning essential water safety and swimming skills.', 'assets/images/badges/water_badge.png'),
+(9, 'Map Reading Badge', 'Earned by learning how to read maps and navigate simple routes.', 'assets/images/badges/map_reading_badge.png'),
+(10, 'Camping Badge', 'Awarded after participating in a Cub Scout camping trip and helping with setup.', 'assets/images/badges/camper_badge.png'),
+(11, 'Fishing Badge', 'Award to scouts that have shown excellent angling skills and have caught 5 fish or more!', 'assets/images/badges/angler_badge.png');
 
 -- --------------------------------------------------------
 
@@ -77,9 +107,28 @@ CREATE TABLE `newsfeed` (
 --
 
 INSERT INTO `newsfeed` (`id`, `message`, `posted_by`, `timestamp`, `is_admin_post`) VALUES
-(1, 'ffsfsfs', 'mickyboy', '2025-05-19 14:52:47', 1),
-(2, 'Hi everyone and welcome to the cubscouts!', 'mickyboy', '2025-05-19 14:53:04', 1),
-(3, 'Updates here', 'mickyboy', '2025-05-19 14:54:51', 1);
+(4, 'Welcome everyone to Obanshire Cub Scouts!', 'Admin', '2025-05-20 21:15:13', 1),
+(6, 'New update folk! Classes will start 5 minutes later this Monday. See you all then!', 'Admin', '2025-05-20 22:03:28', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `parent_scout_links`
+--
+
+CREATE TABLE `parent_scout_links` (
+  `id` int(11) NOT NULL,
+  `parent_id` int(11) NOT NULL,
+  `scout_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `parent_scout_links`
+--
+
+INSERT INTO `parent_scout_links` (`id`, `parent_id`, `scout_id`) VALUES
+(3, 77, 78),
+(4, 81, 80);
 
 -- --------------------------------------------------------
 
@@ -100,9 +149,9 @@ CREATE TABLE `scouts` (
 --
 
 INSERT INTO `scouts` (`id`, `user_id`, `first_name`, `surname`, `link_code`) VALUES
-(2, NULL, 'Danial', 'La Russo', '1785SNYW'),
-(3, 74, 'Scott', 'Woodcock', 'H67PWAMZ'),
-(4, 76, 'Aidan', 'O\'Rourke', 'B0UA5IVH');
+(5, 78, 'Aidan', 'O\'Rourke', 'L1HP9NEQ'),
+(6, 80, 'Danial', 'LaRusso', 'INC9EBGL'),
+(7, 82, 'Jay', 'Chou', 'USEQ5FHK');
 
 -- --------------------------------------------------------
 
@@ -125,17 +174,53 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `user_type`, `first_name`, `surname`) VALUES
-(64, 'mickyboy', '$2y$10$MrMzQp6x3wum9vnUWIL0W.L77mG.aR37w/KwyhBiWRN.55hU.IpXq', 'Mdougie@hotmail.co.uk', 'admin', 'Mike', 'Douglas'),
-(65, 'Scout', '$2y$10$wk1e4T39KRI0oZETRUubLuqsUNzgMyZP55szq1Tn1ZT96atYDnGh.', 'aidanorourke@hotmail.co.uk', 'scout', 'Aidan', 'O\'Rourke'),
-(66, 'martinboy', '$2y$10$F1TvFrWC.JmIKV1ScbNHYeQ42O4o2mjM8iwFypp2bJRMQYY3Rf3aG', 'martinorourke@gmail.com', 'parent', 'Martin', 'O\'Rourke'),
-(73, 'KarateKid', '$2y$10$mHZgrgiM0OduKhVSgwbyIe0Dg8iSI15nMAwEcgdXcN.56kPCI1Wz.', 'danny@gmail.com', 'scout', 'Danial', 'La Russo'),
-(74, 'pecker', '$2y$10$cGCzohRHC84vynNI2dmZLOLZobplw75SHBdx1bw/VwW4XxMEKXOcG', 'scott@hotmail.co.uk', 'scout', 'Scott', 'Woodcock'),
-(75, 'danny2k601', '$2y$10$IWg81s73tfmE76Q/UOBVVuX.dL1yOtozP.q1MQu0c094Yx5ZwlJRG', 'aiday@hotmail.co.uk', 'parent', 'Aidan', 'Mann'),
-(76, 'towlie', '$2y$10$MU1kvuzTvgjrJOi6izGx2.r7ZuPxJps2Lgl7piSz84sWZRl/M9VXS', 'ajkdjwk@hptsk.com', 'scout', 'Aidan', 'O\'Rourke');
+(77, 'Parent', '$2y$10$oxvJuqL3HHLf6M2cEIGcrevcjZxhgndzar9PIMxicHANOlIf0kE.a', 'martin@hotmail.co.uk', 'parent', 'Martin ', 'O\'Rourke'),
+(78, 'Scout', '$2y$10$0/oJ7e8WGHHMhRuf3wkiJ.LppqjGuPB3VLq34rSHlBVFgVvoyGi4e', 'aidanman@hotmail.co.uk', 'scout', 'Aidan', 'O\'Rourke'),
+(79, 'Admin', '$2y$10$Kvyw/Z1jUjPLdLxVXImqsOxd675vkGquuZC7a2AyM.cMJVIedFU9m', 'mike@scouts.com', 'admin', 'Mike', 'Douglas'),
+(80, 'KarateKid', '$2y$10$dLLK9br7JYGTSYVa4WNGeOwsMM5dcU3xtKyUyKwAy7CXntAviBvEW', 'danial@gmail.com', 'scout', 'Danial', 'LaRusso'),
+(81, 'MiyagiSan', '$2y$10$h6YPWxiwW6Um4nE/Rw0AveXJv/JkhxVIWNzs2ZnUB3rr2ojdLOcjq', 'mrM@hotmail.jp', 'parent', 'Mr', 'Miyagi'),
+(82, 'jaysinger', '$2y$10$gwBiml1SBM0GzkqNivjLBeOOfHF8A8esUM5y357/QnrJHSDkCZVlm', 'jj@hotmail.com', 'scout', 'Jay', 'Chou');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_badges`
+--
+
+CREATE TABLE `user_badges` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `badge_id` int(11) NOT NULL,
+  `awarded_by` int(11) NOT NULL,
+  `awarded_at` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_badges`
+--
+
+INSERT INTO `user_badges` (`id`, `user_id`, `badge_id`, `awarded_by`, `awarded_at`) VALUES
+(1, 78, 1, 79, '2025-05-21 00:17:08'),
+(2, 78, 2, 79, '2025-05-21 00:18:52'),
+(9, 78, 11, 79, '2025-05-21 00:51:48'),
+(13, 78, 3, 79, '2025-05-21 01:05:18'),
+(14, 78, 4, 79, '2025-05-21 01:05:22'),
+(15, 78, 5, 79, '2025-05-21 01:05:26'),
+(16, 78, 6, 79, '2025-05-21 01:05:32'),
+(17, 78, 7, 79, '2025-05-21 01:05:38'),
+(18, 78, 8, 79, '2025-05-21 01:05:42'),
+(19, 78, 9, 79, '2025-05-21 01:05:46'),
+(20, 78, 10, 79, '2025-05-21 01:05:52');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `badges`
+--
+ALTER TABLE `badges`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `images`
@@ -148,6 +233,14 @@ ALTER TABLE `images`
 --
 ALTER TABLE `newsfeed`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `parent_scout_links`
+--
+ALTER TABLE `parent_scout_links`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `parent_id` (`parent_id`),
+  ADD KEY `scout_id` (`scout_id`);
 
 --
 -- Indexes for table `scouts`
@@ -166,8 +259,23 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `email` (`email`);
 
 --
+-- Indexes for table `user_badges`
+--
+ALTER TABLE `user_badges`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `badge_id` (`badge_id`),
+  ADD KEY `awarded_by` (`awarded_by`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `badges`
+--
+ALTER TABLE `badges`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `images`
@@ -179,29 +287,56 @@ ALTER TABLE `images`
 -- AUTO_INCREMENT for table `newsfeed`
 --
 ALTER TABLE `newsfeed`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `parent_scout_links`
+--
+ALTER TABLE `parent_scout_links`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `scouts`
 --
 ALTER TABLE `scouts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+
+--
+-- AUTO_INCREMENT for table `user_badges`
+--
+ALTER TABLE `user_badges`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables
 --
 
 --
+-- Constraints for table `parent_scout_links`
+--
+ALTER TABLE `parent_scout_links`
+  ADD CONSTRAINT `parent_scout_links_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `parent_scout_links_ibfk_2` FOREIGN KEY (`scout_id`) REFERENCES `users` (`id`);
+
+--
 -- Constraints for table `scouts`
 --
 ALTER TABLE `scouts`
   ADD CONSTRAINT `scouts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Constraints for table `user_badges`
+--
+ALTER TABLE `user_badges`
+  ADD CONSTRAINT `user_badges_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `user_badges_ibfk_2` FOREIGN KEY (`badge_id`) REFERENCES `badges` (`id`),
+  ADD CONSTRAINT `user_badges_ibfk_3` FOREIGN KEY (`awarded_by`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
