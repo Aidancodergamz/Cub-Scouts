@@ -18,3 +18,6 @@ A PHP web application for managing Cub Scouts activities.
 
 ## Folder Structure
 
+## User information
+
+Hi Karen
