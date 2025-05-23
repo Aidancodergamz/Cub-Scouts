@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['link_code'])) {
             $message = "Scout user details not found.";
         }
     } else {
-        $message = "Invalid link code.";
+        $message = "Sorry, your link code in invalid, please try again.";
     }
 }
 
@@ -96,7 +96,9 @@ $linkedScouts = $linkedStmt->get_result();
         <input type="text" name="link_code" required>
         <button type="submit">Link Scout</button>
     </form>
+</div>
 
+<div class="linked-scouts">
     <h2>Your Linked Scouts:</h2>
 <ul>
 <?php while ($row = $linkedScouts->fetch_assoc()): ?>
@@ -107,5 +109,8 @@ $linkedScouts = $linkedStmt->get_result();
     </li>
 <?php endwhile; ?>
 </ul>
+</div>
+    
+
 </body>
 </html>

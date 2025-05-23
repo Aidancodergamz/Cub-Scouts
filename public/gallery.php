@@ -1,6 +1,7 @@
 <?php
-include 'includes/header.php';
-include "config/config.php";
+include(__DIR__ . '/../includes/header.php');
+include(__DIR__ . '/../config/config.php');
+
 
 // Check if user_type is set in the session
 if (isset($_SESSION['user_type'])) {
@@ -26,8 +27,17 @@ $result = $conn->query($query);
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="gallery-item">';
                 echo '<img src="' . $row['image_path'] . '" alt="' . htmlspecialchars($row['image_name']) . '">';
-                echo '</div>';
-            }
+
+            if ($user_type === 'admin') {
+                echo '<form method="POST" action="handlers/delete_image.php" class="delete-form" onsubmit="return confirm(\'Are you sure you want to delete this image?\');">';
+                echo '<input type="hidden" name="image_path" value="' . htmlspecialchars($row['image_path']) . '">';
+                echo '<button type="submit" class="delete-button">&times;</button>';
+                echo '</form>';
+    }
+
+    echo '</div>';
+}
+
         } else {
             echo "<p>No images uploaded yet.</p>";
         }
@@ -44,6 +54,8 @@ $result = $conn->query($query);
         </form>
     </div>
     <?php endif; ?>
+
+    <script src="assets/js/gallery.js"></script>
 
 </body>
 </html>

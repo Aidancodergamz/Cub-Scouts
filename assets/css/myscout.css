@@ -1,22 +1,30 @@
 /* Header styling */
 h1 {
+    width: 100%;
     color: #2c3e50;
     font-size: 2em;
     margin-bottom: 10px;
+    margin: 1rem 0rem;
+    display: flex;
+    justify-content: center;
 }
 
 /* Messages */
 p {
-    background-color: #dff0d8;
-    color: #3c763d;
+    background-color: #ff6464;
+    color: #ffffff;
     padding: 10px;
-    border-radius: 5px;
-    max-width: 400px;
+    /* border-radius: 5px; */
+    /* max-width: 400px; */
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    width: 30%;
 }
 
 /* Form styling */
 form {
-    margin: 20px 0;
+    margin: 20px auto;
     max-width: 400px;
     background-color: #ffffff;
     padding: 15px;
@@ -49,6 +57,12 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.linked-scouts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Linked scouts list */

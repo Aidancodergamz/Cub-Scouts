@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-<h1>Edit User #<?= htmlspecialchars($user_id) ?></h1>
+<h1>Edit User: <?= htmlspecialchars($user_id) ?></h1>
 
 <?php if ($error): ?>
     <div class="message error"><?= htmlspecialchars($error) ?></div>
@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="message success"><?= htmlspecialchars($success) ?></div>
 <?php endif; ?>
 
-<form method="post" action="">
+<form method="post" action="" class="edit-user-form">
     <label for="first_name">First Name:</label>
     <input type="text" id="first_name" name="first_name" value="<?= htmlspecialchars($user['first_name']) ?>" required />
 

@@ -1,3 +1,18 @@
+.edit-user-form {
+    width: 35%;   
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 5px;
+    display: flex; 
+    flex-direction: column; 
+    justify-self: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
 label {
     display: block;
     margin-top: 15px;
@@ -24,7 +39,11 @@ select {
 }
 
 .message {
-    margin-top: 15px;
+    /* margin-top: 15px; */
+    margin: 2rem auto;
+    width: 100%;
+    text-align: center;
+    font-size: 1.4em;
 }
 
 .error {
@@ -37,4 +56,8 @@ select {
 
 a {
     display: inline-block;
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
 }
