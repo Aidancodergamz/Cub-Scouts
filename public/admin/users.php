@@ -17,7 +17,6 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Manage Users</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Optional CSS -->
 </head>
 <body>
     <div class="admin-container">

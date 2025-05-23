@@ -2,8 +2,7 @@
     include 'includes/header.php';
     include 'config/config.php';
 
-// Fetch newsfeed messages from the database
-$sql = "SELECT * FROM newsfeed ORDER BY timestamp ASC";
+$sql = "SELECT * FROM newsfeed ORDER BY timestamp DESC";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -27,18 +26,18 @@ if ($result->num_rows > 0) {
 </head>
 <body>
     <?php
-
-if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'admin') {
-
+    
+    if (isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'admin') {
+    
     ?>
     <form method="POST" action="postnews">
-        <textarea name="message" placeholder="Enter your newsfeed message..." required></textarea><br>
-        <button type="submit">Post Newsfeed</button>
+        <textarea name="message" placeholder="Enter your message..." required></textarea><br>
+        <button type="submit">Post</button>
     </form>
     <?php
-} else {
-    // echo "You are not authorized to post messages.";
-}
+    } else {
+        // echo "You are not authorized to post messages.";
+    }
 ?>
 </body>
 </html>
