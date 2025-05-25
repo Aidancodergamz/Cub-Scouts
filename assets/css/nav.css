@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 /* Navbar container */
 .navbar {
     background-color: #333;
@@ -18,6 +20,8 @@
     text-decoration: none;
     font-size: 26px;
     font-weight: bold;
+    font-family: "Bebas Neue";
+    letter-spacing: 0.10em;
 }
 
 /* Hamburger icon container */
