@@ -1,0 +1,158 @@
+/* Heading */
+h2 {
+    text-align: center;
+    color: #0055a5;
+    margin-bottom: 1.5rem;
+}
+
+/* Success message */
+p strong {
+    display: block;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Form styles */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    justify-self: center;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    color: #0055a5;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #0055a5;
+    outline: none;
+}
+
+/* Checkbox */
+label input[type="checkbox"] {
+    margin-right: 0.5rem;
+    transform: scale(1.2);
+    vertical-align: middle;
+}
+
+/* Date input */
+input[type="date"] {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="date"]:focus {
+    border-color: #0055a5;
+    outline: none;
+}
+
+/* Submit button */
+button[type="submit"] {
+    margin-top: 2rem;
+    background-color: #0055a5;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 85, 165, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #003d7a;
+}
+
+/* Responsive styling */
+
+/* Mobile: up to 480px */
+@media (max-width: 480px) {
+
+    form {
+        padding: 1.5rem 1rem;
+        border-radius: 8px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    textarea, input[type="date"] {
+        font-size: 0.9rem;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
+}
+
+/* Tablet: 481px to 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    textarea, input[type="date"] {
+        font-size: 1rem;
+    }
+
+    button[type="submit"] {
+        width: auto;
+        padding: 0.75rem 2.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktop: 769px and above */
+@media (min-width: 769px) {
+
+    h2 {
+        font-size: 2rem;
+        margin: 2rem 0rem;
+    }
+
+    textarea, input[type="date"] {
+        font-size: 1.1rem;
+    }
+
+    button[type="submit"] {
+        padding: 0.75rem 3rem;
+        font-size: 1.2rem;
+    }
+}

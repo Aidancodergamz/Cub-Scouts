@@ -13,11 +13,17 @@
 <body>
     
     <section class="home-hero">
-        <div class="home-hero-text">
-            <h1>Welcome to Obanshire Cub Scouts!</h1>
-            <p>Your adventure starts here!</p>
-        </div>
-    </section>
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="assets/video/stock_video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+    <div class="home-hero-overlay"></div>
+    <div class="home-hero-text">
+        <h1>Welcome to Obanshire Cub Scouts!</h1>
+        <p>Your adventure starts here!</p>
+    </div>
+</section>
+
 
     <section class="home-intro">
         <div class="home-container home-flex-row">

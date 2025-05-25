@@ -32,7 +32,7 @@
                 <?php elseif ($_SESSION['user_type'] === 'parent'): ?>
                     <li><a href="<?= ROOT_DIR ?>parent_dash">Parent Dash</a></li>
                     <li><a href="<?= ROOT_DIR ?>myscout">My Scout</a></li>
-                    <li><a href="<?= ROOT_DIR ?>parent_details">Parent/Helper Details</a></li>
+                    <li><a href="<?= ROOT_DIR ?>parent_details">Parent & Helper Details</a></li>
                     <li><a href="<?= ROOT_DIR ?>gallery">Gallery</a></li>
                     <li><a href="<?= ROOT_DIR ?>newsfeed">Newsfeed</a></li>
 

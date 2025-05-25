@@ -92,7 +92,7 @@ $linkedScouts = $linkedStmt->get_result();
     <?php if (!empty($message)) echo "<p>" . htmlspecialchars($message) . "</p>"; ?>
 
     <form method="post">
-        <label>Enter your child's link code:</label>
+        <label>Enter your link code. You can find this on your child's dashboard when they login.</label>
         <input type="text" name="link_code" required>
         <button type="submit">Link Scout</button>
     </form>

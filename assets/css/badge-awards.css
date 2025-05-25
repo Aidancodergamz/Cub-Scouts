@@ -50,6 +50,16 @@
     background-color: #357ABD;
   }
   
+  .award-badge {
+    background-color: #197c19;
+    color: #fff;
+    font-size: 26px;
+    width: 30%;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+  }
+
   /* Responsive tweaks */
   @media (max-width: 480px) {
     form {
