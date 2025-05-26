@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2025 at 07:48 AM
+-- Generation Time: May 26, 2025 at 05:42 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -69,24 +69,17 @@ CREATE TABLE `images` (
 --
 
 INSERT INTO `images` (`id`, `image_name`, `image_path`, `uploaded_at`) VALUES
-(63, 'profile_1.jpg', 'public/assets/uploads/profile_1.jpg', '2025-05-13 18:38:30'),
-(64, 'profile_2.jpg', 'public/assets/uploads/profile_2.jpg', '2025-05-13 18:38:38'),
-(65, 'profile_3.jpg', 'public/assets/uploads/profile_3.jpg', '2025-05-13 18:38:45'),
-(66, 'pauline-loroy-A9U0cMNsxwY-unsplash.jpg', 'public/assets/uploads/pauline-loroy-A9U0cMNsxwY-unsplash.jpg', '2025-05-13 18:41:32'),
-(67, 'maks_gnatovskyi01-ETT2xLg7zBY-unsplash.jpg', 'public/assets/uploads/maks_gnatovskyi01-ETT2xLg7zBY-unsplash.jpg', '2025-05-13 18:41:43'),
-(68, 'Screenshot 2025-05-13 182858.png', 'public/assets/uploads/Screenshot 2025-05-13 182858.png', '2025-05-13 18:41:51'),
-(69, 'mael-balland-VDKV4Xd0nTc-unsplash.jpg', 'public/assets/uploads/mael-balland-VDKV4Xd0nTc-unsplash.jpg', '2025-05-13 18:42:08'),
-(70, 'pauline-loroy-A9U0cMNsxwY-unsplash.jpg', 'public/assets/uploads/pauline-loroy-A9U0cMNsxwY-unsplash.jpg', '2025-05-13 18:44:50'),
-(71, 'profile_2.jpg', 'public/assets/uploads/profile_2.jpg', '2025-05-13 18:45:07'),
-(72, 'annie-spratt-zIKZF9ef2VM-unsplash.jpg', 'public/assets/uploads/annie-spratt-zIKZF9ef2VM-unsplash.jpg', '2025-05-13 18:45:13'),
-(73, 'jorgen-larsen-wG1jeM4jPuM-unsplash.jpg', 'public/assets/uploads/jorgen-larsen-wG1jeM4jPuM-unsplash.jpg', '2025-05-13 18:45:19'),
-(74, 'profile_1.jpg', 'public/assets/uploads/profile_1.jpg', '2025-05-13 18:47:35'),
-(75, 'jorgen-larsen-wG1jeM4jPuM-unsplash.jpg', 'public/assets/uploads/jorgen-larsen-wG1jeM4jPuM-unsplash.jpg', '2025-05-13 18:47:41'),
-(76, 'maks_gnatovskyi01-ETT2xLg7zBY-unsplash.jpg', 'public/assets/uploads/maks_gnatovskyi01-ETT2xLg7zBY-unsplash.jpg', '2025-05-13 18:47:50'),
-(77, 'maks_gnatovskyi01-ETT2xLg7zBY-unsplash.jpg', 'public/assets/uploads/maks_gnatovskyi01-ETT2xLg7zBY-unsplash.jpg', '2025-05-14 09:52:20'),
-(78, 'mael-balland-VDKV4Xd0nTc-unsplash.jpg', 'public/assets/uploads/mael-balland-VDKV4Xd0nTc-unsplash.jpg', '2025-05-14 09:52:29'),
-(79, 'what_we_do.jpg', 'public/assets/uploads/what_we_do.jpg', '2025-05-14 09:52:37'),
-(80, 'scouts_walk.jpg', 'public/assets/uploads/scouts_walk.jpg', '2025-05-14 09:52:44');
+(109, 'annie-spratt-zIKZF9ef2VM-unsplash.jpg', 'public/assets/uploads/annie-spratt-zIKZF9ef2VM-unsplash.jpg', '2025-05-26 06:30:38'),
+(110, 'jorgen-larsen-wG1jeM4jPuM-unsplash.jpg', 'public/assets/uploads/jorgen-larsen-wG1jeM4jPuM-unsplash.jpg', '2025-05-26 06:30:43'),
+(111, 'mael-balland-VDKV4Xd0nTc-unsplash.jpg', 'public/assets/uploads/mael-balland-VDKV4Xd0nTc-unsplash.jpg', '2025-05-26 06:30:48'),
+(112, 'pauline-loroy-A9U0cMNsxwY-unsplash.jpg', 'public/assets/uploads/pauline-loroy-A9U0cMNsxwY-unsplash.jpg', '2025-05-26 06:30:54'),
+(113, 'maks_gnatovskyi01-ETT2xLg7zBY-unsplash.jpg', 'public/assets/uploads/maks_gnatovskyi01-ETT2xLg7zBY-unsplash.jpg', '2025-05-26 06:31:01'),
+(114, 'what_we_do.jpg', 'public/assets/uploads/what_we_do.jpg', '2025-05-26 06:31:09'),
+(116, 'scouts_walk.jpg', 'public/assets/uploads/scouts_walk.jpg', '2025-05-26 06:31:52'),
+(117, 'atomic-pile-maneuver.jpg', 'public/assets/uploads/atomic-pile-maneuver.jpg', '2025-05-26 08:12:23'),
+(122, 'cub-scout-play-games-in-outdoor.jpg', 'public/assets/uploads/cub-scout-play-games-in-outdoor.jpg', '2025-05-26 15:32:39'),
+(123, 'cub-scout-spud-games.jpg', 'public/assets/uploads/cub-scout-spud-games.jpg', '2025-05-26 15:34:25'),
+(124, 'Young-Scouts-Create-An-Evening-Of-Festive-Fun-And-Games-For-Care-Home-Residents-.jpg', 'public/assets/uploads/Young-Scouts-Create-An-Evening-Of-Festive-Fun-And-Games-For-Care-Home-Residents-.jpg', '2025-05-26 15:37:28');
 
 -- --------------------------------------------------------
 
@@ -108,7 +101,30 @@ CREATE TABLE `newsfeed` (
 
 INSERT INTO `newsfeed` (`id`, `message`, `posted_by`, `timestamp`, `is_admin_post`) VALUES
 (4, 'Welcome everyone to Obanshire Cub Scouts!', 'Admin', '2025-05-20 21:15:13', 1),
-(6, 'New update folk! Classes will start 5 minutes later this Monday. See you all then!', 'Admin', '2025-05-20 22:03:28', 1);
+(6, 'New update folk! Classes will start 5 minutes later this Monday. See you all then!', 'Admin', '2025-05-20 22:03:28', 1),
+(7, 'Hi everyone! Just a quick update from your Scout Leader.\r\n\r\nMike.', 'Admin', '2025-05-23 13:16:46', 1),
+(8, 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).', 'Admin', '2025-05-23 13:59:48', 1),
+(9, 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', 'Admin', '2025-05-23 14:00:22', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `parent_details`
+--
+
+CREATE TABLE `parent_details` (
+  `parent_id` int(11) NOT NULL,
+  `availability` varchar(255) DEFAULT NULL,
+  `training_completed` tinyint(1) DEFAULT NULL,
+  `training_date` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `parent_details`
+--
+
+INSERT INTO `parent_details` (`parent_id`, `availability`, `training_completed`, `training_date`) VALUES
+(90, 'I can volunteer most days as I am retired now.', 1, '1992-06-06');
 
 -- --------------------------------------------------------
 
@@ -127,9 +143,7 @@ CREATE TABLE `parent_scout_links` (
 --
 
 INSERT INTO `parent_scout_links` (`id`, `parent_id`, `scout_id`) VALUES
-(3, 77, 78),
-(4, 81, 80),
-(5, 77, 83);
+(8, 90, 89);
 
 -- --------------------------------------------------------
 
@@ -150,9 +164,7 @@ CREATE TABLE `scouts` (
 --
 
 INSERT INTO `scouts` (`id`, `user_id`, `first_name`, `surname`, `link_code`) VALUES
-(5, 78, 'Aidan', 'O\'Rourke', 'L1HP9NEQ'),
-(6, 80, 'Danial', 'LaRusso', 'INC9EBGL'),
-(8, 83, 'Caitlin', 'O\'Rourke', '6A9EIPMS');
+(11, 89, 'Aidan', 'O\'Rourke', 'YKA8SF6R');
 
 -- --------------------------------------------------------
 
@@ -175,12 +187,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `user_type`, `first_name`, `surname`) VALUES
-(77, 'Parent', '$2y$10$oxvJuqL3HHLf6M2cEIGcrevcjZxhgndzar9PIMxicHANOlIf0kE.a', 'martin@hotmail.co.uk', 'parent', 'Martin ', 'O\'Rourke'),
-(78, 'Scout', '$2y$10$0/oJ7e8WGHHMhRuf3wkiJ.LppqjGuPB3VLq34rSHlBVFgVvoyGi4e', 'aidanman@hotmail.co.uk', 'scout', 'Aidan', 'O\'Rourke'),
 (79, 'Admin', '$2y$10$Kvyw/Z1jUjPLdLxVXImqsOxd675vkGquuZC7a2AyM.cMJVIedFU9m', 'mike@scouts.com', 'admin', 'Mike', 'Douglas'),
-(80, 'KarateKid', '$2y$10$dLLK9br7JYGTSYVa4WNGeOwsMM5dcU3xtKyUyKwAy7CXntAviBvEW', 'danial@gmail.com', 'scout', 'Danial', 'LaRusso'),
-(81, 'MiyagiSan', '$2y$10$h6YPWxiwW6Um4nE/Rw0AveXJv/JkhxVIWNzs2ZnUB3rr2ojdLOcjq', 'mrM@hotmail.jp', 'parent', 'Mr', 'Miyagi'),
-(83, 'cattie', '$2y$10$HaiVgO.G.QFDSOmWBdsTGul7EQjsACYV.OWa6tgzHHDkOOb44HB0q', 'caitlin@hotmail.com', 'scout', 'Caitlin', 'O\'Rourke');
+(89, 'scout', '$2y$10$h8SoBk4/JhusGDNSF/HiHOZIw763YLB7331SZoafe4YyRoKvcnUwq', 'aidanorourke@hotmail.co.uk', 'scout', 'Aidan', 'O\'Rourke'),
+(90, 'parent', '$2y$10$dwv5wFIP4RTkSK.dqrzhn.W4M8ZGUDdKbXC0urOF/eGF00HlMWy46', 'martin@gmail.com', 'parent', 'Martin', 'O\'Rourke');
 
 -- --------------------------------------------------------
 
@@ -201,18 +210,11 @@ CREATE TABLE `user_badges` (
 --
 
 INSERT INTO `user_badges` (`id`, `user_id`, `badge_id`, `awarded_by`, `awarded_at`) VALUES
-(1, 78, 1, 79, '2025-05-21 00:17:08'),
-(2, 78, 2, 79, '2025-05-21 00:18:52'),
-(9, 78, 11, 79, '2025-05-21 00:51:48'),
-(13, 78, 3, 79, '2025-05-21 01:05:18'),
-(14, 78, 4, 79, '2025-05-21 01:05:22'),
-(15, 78, 5, 79, '2025-05-21 01:05:26'),
-(16, 78, 6, 79, '2025-05-21 01:05:32'),
-(17, 78, 7, 79, '2025-05-21 01:05:38'),
-(18, 78, 8, 79, '2025-05-21 01:05:42'),
-(19, 78, 9, 79, '2025-05-21 01:05:46'),
-(20, 78, 10, 79, '2025-05-21 01:05:52'),
-(21, 83, 4, 79, '2025-05-21 06:47:53');
+(39, 89, 11, 79, '2025-05-25 04:15:22'),
+(40, 89, 3, 79, '2025-05-25 04:15:29'),
+(41, 89, 7, 79, '2025-05-25 04:15:35'),
+(42, 89, 9, 79, '2025-05-25 04:15:40'),
+(43, 89, 6, 79, '2025-05-25 04:15:45');
 
 --
 -- Indexes for dumped tables
@@ -235,6 +237,12 @@ ALTER TABLE `images`
 --
 ALTER TABLE `newsfeed`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `parent_details`
+--
+ALTER TABLE `parent_details`
+  ADD PRIMARY KEY (`parent_id`);
 
 --
 -- Indexes for table `parent_scout_links`
@@ -283,41 +291,47 @@ ALTER TABLE `badges`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 
 --
 -- AUTO_INCREMENT for table `newsfeed`
 --
 ALTER TABLE `newsfeed`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `parent_scout_links`
 --
 ALTER TABLE `parent_scout_links`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `scouts`
 --
 ALTER TABLE `scouts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT for table `user_badges`
 --
 ALTER TABLE `user_badges`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `parent_details`
+--
+ALTER TABLE `parent_details`
+  ADD CONSTRAINT `parent_details_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `parent_scout_links`
