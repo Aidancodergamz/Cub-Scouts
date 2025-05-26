@@ -20,4 +20,13 @@ A PHP web application for managing Cub Scouts activities.
 
 ## User information
 
-Hi Karen
+Hi Karen the current user names are as follows:
+
+Usernames:
+scout
+parent
+admin
+
+All passwords are just "password"
+
+Feel free to create your own accounts and try them out.

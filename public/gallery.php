@@ -42,7 +42,7 @@ $result = $conn->query($query);
         ?>
     </div>
 
-    <?php if ($user_type === 'admin' || $user_type === 'parent'): ?>
+    <?php if ($user_type === 'admin'):?>
     <div class="gallery-upload-section">
         <form action="handlers/image_upload.php" method="post" enctype="multipart/form-data">
             <label for="imageUpload">Upload an image:</label>
