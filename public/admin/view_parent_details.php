@@ -3,13 +3,11 @@
 include 'config/config.php';
 include 'includes/header.php';
 
-// Check if user is an admin
 if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'admin') {
     echo "Access denied.";
     exit;
 }
 
-// Fetch parent details with names
 $sql = "SELECT u.username, u.first_name, u.surname, u.email, pd.availability, pd.training_completed, pd.training_date
         FROM users u
         JOIN parent_details pd ON u.id = pd.parent_id

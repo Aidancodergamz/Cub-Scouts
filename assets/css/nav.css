@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-/* Navbar container */
 .navbar {
     background-color: #333;
     padding: 2rem;
@@ -14,7 +13,6 @@
     position: relative;
 }
 
-/* Logo styling */
 .logo a {
     color: white;
     text-decoration: none;
@@ -24,7 +22,6 @@
     letter-spacing: 0.10em;
 }
 
-/* Hamburger icon container */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -35,7 +32,6 @@
     z-index: 1100;
 }
 
-/* Hamburger bars */
 .hamburger .bar {
     height: 3px;
     width: 100%;
@@ -44,7 +40,6 @@
     transition: all 0.6s ease;
 }
 
-/* Animate into X when active */
 .hamburger.open .bar:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
 }
@@ -57,7 +52,6 @@
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Navbar links (default desktop view) */
 .nav-links {
     list-style-type: none;
     display: flex;
@@ -84,7 +78,6 @@
     border-radius: 4px;
 }
 
-/* Fullscreen overlay for mobile/tablet */
 .nav-links.mobile {
     display: none;
     flex-direction: column;
@@ -100,7 +93,6 @@
     display: flex;
 }
 
-/* Styles for links in overlay */
 .nav-links.mobile li {
     margin: 20px 0;
 }
@@ -112,7 +104,6 @@
     text-align: center;
 }
 
-/* X Close Button */
 .close-btn {
     position: absolute;
     top: 20px;
@@ -127,7 +118,6 @@
     display: block;
 }
 
-/* Responsive styling */
 @media screen and (max-width: 1024px) {
     .hamburger {
         display: flex;

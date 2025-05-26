@@ -4,9 +4,8 @@
     padding: 20px;
 }
 
-/* Success message box */
 .success-message {
-    background-color: #28a745; /* Vibrant green */
+    background-color: #28a745; 
     color: white;
     padding: 40px;
     border-radius: 8px;
@@ -29,7 +28,7 @@
     padding: 15px 30px;
     font-size: 18px;
     color: white;
-    background-color: #007bff; /* Vibrant blue for the button */
+    background-color: #007bff; 
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -38,10 +37,9 @@
 }
 
 .success-message .btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3; 
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .success-message h2 {
         font-size: 28px;

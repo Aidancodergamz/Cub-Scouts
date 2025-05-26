@@ -1,3 +1,9 @@
+#badges-heading {
+    text-align: center;
+    font-size: 32px;
+    margin: 2rem 0rem;
+}
+
 .badges-container {
     display: flex;
     flex-wrap: wrap;
@@ -6,7 +12,6 @@
     padding: 20px;
 }
 
-/* Badge card styling */
 .badge-card {
     background-color: #f9f9f9;
     border: 2px solid #4a90e2;
@@ -39,7 +44,7 @@
 .badge-description {
     font-size: 0.9rem;
     color: #555;
-    min-height: 60px; /* keeps card height consistent */
+    min-height: 60px; 
 }
 
 .badge-awarded-date {
@@ -49,23 +54,18 @@
     margin-top: 10px;
 }
 
-/* Responsive breakpoints */
-
-/* Large devices (desktops) - 3 cards per row */
 @media (min-width: 1024px) {
     .badge-card {
         width: 220px;
     }
 }
 
-/* Medium devices (tablets) - 2 cards per row */
 @media (min-width: 600px) and (max-width: 1023px) {
     .badge-card {
         width: 45%;
     }
 }
 
-/* Small devices (phones) - 1 card per row */
 @media (max-width: 599px) {
     .badge-card {
         width: 90%;

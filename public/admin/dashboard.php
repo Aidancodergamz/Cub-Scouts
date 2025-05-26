@@ -3,18 +3,15 @@
     include 'includes/header.php';   
     include 'config/config.php';     
 
-    // Check if the user is logged in (by checking the session)
     if (!isset($_SESSION['username'])) {
         die("You need to log in first.");
     }
 
-    // Get the logged-in username from the session
     $username = $_SESSION['username'];
 
-    // Query user info by username (use prepared statements for security)
     $sql = "SELECT * FROM users WHERE username = ?";
     $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, "s", $username);  // "s" stands for string
+    mysqli_stmt_bind_param($stmt, "s", $username);  
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
 
@@ -22,7 +19,6 @@
         die("User not found.");
     }
 
-    // Fetch user data
     $user = mysqli_fetch_assoc($result);
 
     if ($user['user_type'] !== 'admin') {

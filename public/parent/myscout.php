@@ -8,7 +8,6 @@ if (!isset($_SESSION['username'])) {
     exit;
 }
 
-// Get parent info from users table
 $username = $_SESSION['username'];
 $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
 $stmt->bind_param("s", $username);
@@ -22,11 +21,9 @@ if ($parent['user_type'] !== 'parent') {
 
 $message = "";
 
-// Handle form submission to link scout
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['link_code'])) {
     $linkCode = trim($_POST['link_code']);
 
-    // Find scout's user_id in scouts table by link_code
     $scoutIdStmt = $conn->prepare("SELECT user_id FROM scouts WHERE link_code = ?");
     $scoutIdStmt->bind_param("s", $linkCode);
     $scoutIdStmt->execute();
@@ -36,21 +33,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['link_code'])) {
         $scoutRow = $scoutIdResult->fetch_assoc();
         $scoutUserId = $scoutRow['user_id'];
 
-        // Get scout details from users table
         $scoutStmt = $conn->prepare("SELECT first_name, surname FROM users WHERE id = ? AND user_type = 'scout'");
         $scoutStmt->bind_param("i", $scoutUserId);
         $scoutStmt->execute();
         $scoutResult = $scoutStmt->get_result();
 
         if ($scoutResult->num_rows === 1) {
-            // Check if parent already linked to scout
+
             $check = $conn->prepare("SELECT * FROM parent_scout_links WHERE parent_id = ? AND scout_id = ?");
             $check->bind_param("ii", $parent['id'], $scoutUserId);
             $check->execute();
             $checkResult = $check->get_result();
 
             if ($checkResult->num_rows === 0) {
-                // Insert link
+
                 $insert = $conn->prepare("INSERT INTO parent_scout_links (parent_id, scout_id) VALUES (?, ?)");
                 $insert->bind_param("ii", $parent['id'], $scoutUserId);
                 if ($insert->execute()) {
@@ -70,7 +66,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['link_code'])) {
     }
 }
 
-// Get all linked scouts for this parent
 $linkedStmt = $conn->prepare("
     SELECT u.id, u.first_name, u.surname 
     FROM users u

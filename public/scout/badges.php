@@ -3,21 +3,17 @@
 include 'config/config.php';
 include 'includes/header.php';
 
-// Ensure user is logged in
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit();
 }
 
-// Check if scout ID is passed via GET parameter and is numeric
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $scout_id = (int)$_GET['id'];
 } else {
-    // Otherwise use logged-in user's ID (scout viewing own badges)
     $scout_id = $_SESSION['user_id'];
 }
 
-// Prepare and fetch badges for this user
 $stmt = $conn->prepare("
     SELECT b.name, b.description, b.image_path, ub.awarded_at
     FROM user_badges ub
@@ -38,7 +34,7 @@ $result = $stmt->get_result();
     <link rel="stylesheet" href="assets/css/scout-badges.css" />
 </head>
 <body>
-    <h1>Current Badges</h1>
+    <h1 id="badges-heading">Current Badges</h1>
 
     <?php if ($result->num_rows > 0): ?>
         <div class="badges-container">

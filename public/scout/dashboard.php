@@ -2,19 +2,16 @@
 include 'includes/header.php';
 include 'config/config.php';
 
-// Start session if not already started
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Check if user is logged in
 if (!isset($_SESSION['username'])) {
     die("You need to log in first.");
 }
 
 $username = $_SESSION['username'];
 
-// Query user info with JOIN to scouts table
 $sql = "SELECT users.*, scouts.link_code 
         FROM users 
         LEFT JOIN scouts ON users.id = scouts.user_id 

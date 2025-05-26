@@ -2,12 +2,10 @@
 include(__DIR__ . '/../includes/header.php');
 include(__DIR__ . '/../config/config.php');
 
-
-// Check if user_type is set in the session
 if (isset($_SESSION['user_type'])) {
     $user_type = $_SESSION['user_type'];
 } else {
-    $user_type = null; // Or you can redirect to login or set a default
+    $user_type = null; 
 }
 
 $query = "SELECT image_name, image_path FROM images";
@@ -44,7 +42,6 @@ $result = $conn->query($query);
         ?>
     </div>
 
-    <!-- Gallery Upload Section -->
     <?php if ($user_type === 'admin' || $user_type === 'parent'): ?>
     <div class="gallery-upload-section">
         <form action="handlers/image_upload.php" method="post" enctype="multipart/form-data">

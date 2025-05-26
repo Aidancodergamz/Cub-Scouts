@@ -20,21 +20,19 @@
     z-index: 0;
 }
 
-/* Transparent overlay to keep your existing background color with opacity */
 .home-hero-overlay {
     position: absolute;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background-color: #333; /* same as .home-hero background */
-    opacity: 0.8; /* adjust transparency here */
+    background-color: #333; 
+    opacity: 0.8; 
     z-index: 1;
 }
 
-/* Make the .home-hero position relative so absolute children are positioned correctly */
 .home-hero {
-    position: relative; /* add this */
-    background-color: #333; /* keep your bg color */
+    position: relative; 
+    background-color: #333; 
     color: var(--light-text);
     padding: 8rem 2rem;
     text-align: center;
@@ -42,10 +40,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    overflow: hidden; /* prevent scrollbars from video */
+    overflow: hidden; 
 }
 
-/* Text should be on top */
 .home-hero-text {
     position: relative;
     z-index: 2;
@@ -65,7 +62,6 @@
     color: white;
 }
 
-/* Section Containers */
 .home-intro,
 .home-activities {
     padding: 4rem 2rem;
@@ -79,7 +75,6 @@
     background-color: var(--secondary-color);
 }
 
-/* Section Titles */
 .home-intro h2,
 .home-activities h2 {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -87,7 +82,6 @@
     text-align: center;
 }
 
-/* Section Paragraphs */
 .home-intro p,
 .home-activities p {
     font-size: 1.1rem;
@@ -95,7 +89,6 @@
     max-width: 60ch;
 }
 
-/* Flex Container for Image and Text Layout */
 .home-container {
     display: flex;
     align-items: center;
@@ -113,7 +106,6 @@
     flex-direction: row-reverse;
 }
 
-/* Image Container */
 .home-image {
     flex: 1 1 300px;
     max-width: 500px;
@@ -131,13 +123,11 @@
     transform: scale(1.02);
 }
 
-/* Text Block */
 .home-text {
     flex: 1 1 300px;
     max-width: 600px;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .home-container {
         flex-direction: column !important;

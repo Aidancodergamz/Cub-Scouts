@@ -1,7 +1,4 @@
-<!-- 404.php -->
-
 <?php
-// 404 error page
 include "includes/header.php";
 ?>
 

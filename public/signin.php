@@ -1,27 +1,25 @@
 <?php
 include('includes/header.php');
-include('config/config.php');  // mysqli connection
+include('config/config.php');  
 
-$error = '';  // Default error is empty
+$error = '';  
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Get user input
+
     $username = trim($_POST['username']);
     $password = $_POST['password'];
 
-    // Prepare the SQL query to prevent SQL Injection
     $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
 
-    // Get the result
     $result = $stmt->get_result();
     $user = $result->fetch_assoc();
 
     if ($user) {
-        // Check if the password is correct
+
         if (password_verify($password, $user['password'])) {
-            // Success: Set session variables
+
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['user_type'] = $user['user_type'];
@@ -52,12 +50,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="sign-in-container">
     <div class="sign-in-login-box">
         <h2>Sign In</h2>
-        <!-- Display error message if set -->
         <?php if ($error): ?>
             <div class="error"><?php echo $error; ?></div>
         <?php endif; ?>
 
-        <!-- Sign In form -->
         <form class="sign-in-form" method="POST" action="/Cub-Scouts/sign_in">
             <div class="sign-in-form-group">
                 <label for="username">Username</label>

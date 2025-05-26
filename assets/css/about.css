@@ -1,4 +1,3 @@
-/* Main Page Container */
 .about-page {
     max-width: 960px;
     margin: 0 auto;
@@ -8,7 +7,6 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Headings */
 .about-intro h1 {
     font-size: 2rem;
     color: #0055a5;
@@ -23,7 +21,6 @@
     margin-bottom: 0.5rem;
 }
 
-/* Paragraphs & Lists */
 .about-page p {
     margin-bottom: 1rem;
     line-height: 1.6;
@@ -37,7 +34,6 @@
     margin-bottom: 0.5rem;
 }
 
-/* Links */
 a {
     color: #0055a5;
     text-decoration: none;
@@ -47,7 +43,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Leader Section */
 .leaders-container {
     display: flex;
     flex-wrap: wrap;
@@ -82,7 +77,6 @@ a:hover {
     border: 2px solid black;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .about-page {
         padding: 1.5rem;

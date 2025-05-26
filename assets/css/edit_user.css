@@ -39,7 +39,6 @@ select {
 }
 
 .message {
-    /* margin-top: 15px; */
     margin: 2rem auto;
     width: 100%;
     text-align: center;

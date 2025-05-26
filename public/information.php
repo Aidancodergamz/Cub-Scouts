@@ -12,13 +12,11 @@
 </head>
 <body>
 
-    <!-- Header Section -->
     <header class="information-header">
         <h1>Information for Parents and Helpers</h1>
         <p>Welcome to the page where you can find everything you need to know about helping out with the Obanshire Cub Scouts!</p>
     </header>
 
-    <!-- Main Content Section -->
     <section class="information-main">
         <h2>Get Involved and Make a Difference</h2>
         <p>At Obanshire Cub Scouts, we value the involvement of parents and helpers. Whether it's supporting activities, assisting with campouts, or helping with event planning, there are plenty of opportunities for you to get involved. Your participation is vital to creating an engaging and fun environment for our Cubs!</p>

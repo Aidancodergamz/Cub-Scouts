@@ -1,9 +1,9 @@
 <?php
 
-include 'config/config.php';  // adjust path if needed
+include 'config/config.php';  
 include 'includes/header.php';
 
-// Only allow admins to access
+
 if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
     echo "Access denied.";
     exit;
@@ -34,7 +34,7 @@ $error = '';
 $success = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Sanitize & validate inputs
+
     $first_name = trim($_POST['first_name']);
     $surname = trim($_POST['surname']);
     $username = trim($_POST['username']);
@@ -46,14 +46,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = "Invalid email address.";
     } else {
-        // Update user
+
         $update_sql = "UPDATE users SET first_name=?, surname=?, username=?, email=?, user_type=? WHERE id=?";
         $update_stmt = $conn->prepare($update_sql);
         $update_stmt->bind_param("sssssi", $first_name, $surname, $username, $email, $user_type, $user_id);
 
         if ($update_stmt->execute()) {
             $success = "User updated successfully.";
-            // Refresh user data
+
             $user['first_name'] = $first_name;
             $user['surname'] = $surname;
             $user['username'] = $username;
@@ -105,7 +105,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <option value="parent" <?= $user['user_type'] === 'parent' ? 'selected' : '' ?>>parent</option>
         <option value="admin" <?= $user['user_type'] === 'admin' ? 'selected' : '' ?>>admin</option>
         <option value="scout" <?= $user['user_type'] === 'scout' ? 'selected' : '' ?>>scout</option>
-        <!-- Add other roles as needed -->
     </select>
 
     <button type="submit" class="btn">Update User</button>

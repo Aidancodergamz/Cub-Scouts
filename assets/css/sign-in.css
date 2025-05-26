@@ -1,4 +1,4 @@
-/* Fullscreen Centering Container */
+
 .sign-in-container {
     min-height: 100vh;
     display: flex;
@@ -10,8 +10,6 @@
     background-color: #ffffff;
 }
 
-
-/* Login Box Styling */
 .sign-in-login-box {
     background-color: #fff;
     padding: 40px 30px;
@@ -23,7 +21,6 @@
     animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Heading */
 .sign-in-login-box h2 {
     margin-bottom: 25px;
     font-size: 28px;
@@ -31,7 +28,6 @@
     font-weight: 700;
 }
 
-/* Error Message */
 .error {
     background-color: #e53935;
     color: #fff;
@@ -41,7 +37,6 @@
     font-weight: 500;
 }
 
-/* Form Group */
 .sign-in-form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -69,7 +64,6 @@
     outline: none;
 }
 
-/* Button */
 .btn {
     width: 100%;
     padding: 14px;
@@ -90,7 +84,6 @@
     outline: none;
 }
 
-/* Fade in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -102,7 +95,6 @@
     }
 }
 
-/* Mobile Responsive Tweak */
 @media (max-width: 480px) {
     .sign-in-login-box {
         padding: 30px 20px;

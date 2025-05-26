@@ -5,18 +5,16 @@ h2 {
     /* margin-bottom: 20px; */
 }
 
-/* Table container for horizontal scrolling on small screens */
 .table-responsive {
     width: 100%;
     overflow-x: auto;
 }
 
-/* Table styling */
 table {
     border-collapse: collapse;
     width: 85%;
     justify-self: center;
-    min-width: 600px; /* ensures table keeps structure */
+    min-width: 600px; 
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -28,7 +26,7 @@ th, td {
 }
 
 th {
-    background-color: #007BFF; /* nice blue header */
+    background-color: #007BFF; 
     color: white;
     font-weight: 600;
 }
@@ -37,7 +35,6 @@ tbody tr:nth-child(even) {
     background-color: #f2f6fc;
 }
 
-/* Responsive font size */
 @media (max-width: 768px) {
 
     th, td {
@@ -48,7 +45,7 @@ tbody tr:nth-child(even) {
 
 @media (max-width: 480px) {
     table {
-        min-width: 100%; /* allow shrinking */
+        min-width: 100%; 
     }
     th, td {
         padding: 8px 6px;

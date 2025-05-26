@@ -21,7 +21,7 @@ $result = mysqli_query($conn, $sql);
 <body>
     <div class="admin-container">
         <h1 class="admin-title">Cub Scout Members</h1>
-        <p>View Parent/Helper details <a href="about_parents">here</a>.</p>
+        <p id="users-message">View Parent/Helper details <a href="about_parents" id="here-link">here</a></p>
 
         <div class="admin-table-wrapper">
             <table class="admin-table">
@@ -47,10 +47,9 @@ $result = mysqli_query($conn, $sql);
                                 <td data-label="Email"><?= htmlspecialchars($user['email']) ?></td>
                                 <td data-label="Role"><?= htmlspecialchars($user['user_type']) ?></td>
                                 <td data-label="Actions">
-                                    <!-- Edit Button -->
+                                    
                                     <a href="edit_user?id=<?= $user['id'] ?>" class="btn-edit">Edit</a>
 
-                                    <!-- Delete Button -->
                                     <form action="delete_user" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this user?');">
                                         <input type="hidden" name="id" value="<?= $user['id'] ?>" />
                                         <button type="submit" class="btn-delete">Delete</button>

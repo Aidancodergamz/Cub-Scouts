@@ -1,6 +1,5 @@
 <?php
 include '../config/config.php';
-include '../includes/header.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image'])) {
     $image = $_FILES['image'];
@@ -12,7 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image'])) {
     $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
     $imageType = mime_content_type($imageTmpName);
 
-    // Correct path to public-facing uploads folder
     $uploadDirectory = __DIR__ . '/../public/assets/uploads/';
     $filePath = $uploadDirectory . $imageName;
 
@@ -29,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image'])) {
     }
 
     if (move_uploaded_file($imageTmpName, $filePath)) {
-        // This path will be used in <img src="">
+
         $imagePath = 'public/assets/uploads/' . $imageName;
 
         $stmt = $conn->prepare("INSERT INTO images (image_name, image_path) VALUES (?, ?)");
@@ -52,9 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['image'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/nav.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
 <body>

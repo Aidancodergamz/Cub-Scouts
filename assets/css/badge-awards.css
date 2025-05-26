@@ -60,7 +60,6 @@
     align-self: center;
   }
 
-  /* Responsive tweaks */
   @media (max-width: 480px) {
     form {
       padding: 20px;

@@ -9,7 +9,6 @@ header h1 {
     font-size: 2em;
 }
 
-/* Newsfeed Section */
 .newsfeed-container {
     width: 90%;
     margin: 20px auto;
@@ -42,7 +41,6 @@ header h1 {
     color: #999;
 }
 
-/* Admin Post Form */
 form {
     background-color: white;
     padding: 20px;
@@ -79,14 +77,12 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Authorization Message */
 .unauthorized-message {
     color: red;
     font-size: 1.1em;
     margin-top: 20px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     body {
         font-size: 14px;

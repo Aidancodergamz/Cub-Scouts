@@ -1,11 +1,9 @@
-/* Heading */
 h2 {
     text-align: center;
     color: #0055a5;
     margin-bottom: 1.5rem;
 }
 
-/* Success message */
 p strong {
     display: block;
     background-color: #d4edda;
@@ -17,7 +15,6 @@ p strong {
     text-align: center;
 }
 
-/* Form styles */
 form {
     background-color: #fff;
     padding: 2rem;
@@ -27,7 +24,6 @@ form {
     justify-self: center;
 }
 
-/* Labels */
 label {
     display: block;
     font-weight: 600;
@@ -36,7 +32,6 @@ label {
     color: #0055a5;
 }
 
-/* Textarea */
 textarea {
     width: 100%;
     min-height: 100px;
@@ -53,14 +48,12 @@ textarea:focus {
     outline: none;
 }
 
-/* Checkbox */
 label input[type="checkbox"] {
     margin-right: 0.5rem;
     transform: scale(1.2);
     vertical-align: middle;
 }
 
-/* Date input */
 input[type="date"] {
     width: 100%;
     padding: 0.5rem 0.75rem;
@@ -75,7 +68,6 @@ input[type="date"]:focus {
     outline: none;
 }
 
-/* Submit button */
 button[type="submit"] {
     margin-top: 2rem;
     background-color: #0055a5;
@@ -94,9 +86,6 @@ button[type="submit"]:hover {
     background-color: #003d7a;
 }
 
-/* Responsive styling */
-
-/* Mobile: up to 480px */
 @media (max-width: 480px) {
 
     form {
@@ -120,7 +109,6 @@ button[type="submit"]:hover {
     }
 }
 
-/* Tablet: 481px to 768px */
 @media (min-width: 481px) and (max-width: 768px) {
 
 
@@ -139,7 +127,6 @@ button[type="submit"]:hover {
     }
 }
 
-/* Desktop: 769px and above */
 @media (min-width: 769px) {
 
     h2 {
