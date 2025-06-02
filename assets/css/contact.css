@@ -57,6 +57,18 @@
     background-color: #27642a;
   }
 
+  .map-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0rem;
+  }
+
+  .map-section h2 {
+    margin: 2rem 0rem;
+  }
+
   @media (max-width: 600px) {
     .contact-container {
       margin: 20px;
